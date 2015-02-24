@@ -603,7 +603,7 @@ span.arrow-bottom.green {
 .dn-slider {
     width: 100%;
     position: relative;
-    z-index: -1;
+    z-index: 0;
     margin: 0px 0px 20px 0px;
 }
 .dn-slider .dn-slider-background {
@@ -5595,6 +5595,22 @@ body .widget_categories h3 {
 .lang .lr{
     font-size: 18px;
 }
+.lang form input[type='submit']{
+    border: 0px;
+    font-weight: bold;
+    color: #29af61;
+    padding-left: 20px;
+}
+.lang #lang_ro{
+    background: #FFF url("/assets/images/ro.png") no-repeat 0px 6px;
+    background-size: 15px 10px;
+
+}
+.lang #lang_ru{
+    background: #FFF url("/assets/images/ru.png") no-repeat 0px 6px;
+    background-size: 15px 10px;
+}
+/*
 #lang_ro img{
     width: 15px;
     height: 10px;
@@ -5608,6 +5624,7 @@ body .widget_categories h3 {
 #lang_ro, #lang_ru{
     font-weight: bold;
 }
+*/
 .dynamic-articles{
     border: 0px solid #000000;
     padding: 0px 10px 0px 0px;

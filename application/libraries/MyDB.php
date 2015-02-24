@@ -28,6 +28,7 @@ class MyDB
                 return MyDB::$dbh;
 
             }catch (PDOException $e){
+                echo "DB conection error : ";
                 var_dump($e->getMessage());
                 return;
             }

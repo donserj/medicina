@@ -61,7 +61,12 @@
                     <a href="#" class="lr">Inregistrare</a> <br>
                     <a href="#" class="lr">Login</a>
                     <br>
-                    <a href="#" id="lang_ro"> <img src="/assets/images/ro.png" alt=""> Ro </a>
+                    <form method="post" action="/page/translatePage">
+                        <input id="lang_ro" type="submit" value="Ro" name="lang_ro">
+                        <input id="lang_ru" type="submit" value="Ru" name="lang_ru">
+                        <input type="hidden" name="current_page" value="<?=current_url();?>">
+                    </form>
+                    <!--a href="#" id="lang_ro"> <img src="/assets/images/ro.png" alt=""> Ro </a>
                     <a href="#" id="lang_ru"> <img src="/assets/images/ru.png" alt=""> Ru </a>
                     <!--select id="demo-htmlselect">
                         <option value="0" data-imagesrc="/assets/images/ro.png" data-description=""> RO </option>
