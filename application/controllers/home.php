@@ -25,8 +25,6 @@ class Home extends CI_Controller{
         $this->data['leftCategories'] = $this->generalmodel->getLeftCategories('ro');
         $this->data['medArticles'] = $this->generalmodel->getArticlesByType('rightMedArticle', 'ro', array(0,7));
 
-        //var_dump($this->data['medArticle']);
-
         $this->load->view('home', $this->data);
     }
 } 
