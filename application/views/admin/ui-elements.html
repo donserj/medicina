@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Bootstrap responsive -->
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<!-- CSS for Growl like notifications -->
+	<link rel="stylesheet" href="css/jquery.gritter.css">
+	<!-- Theme CSS -->
+	<!--[if !IE]> -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <![endif]-->
+	<!--[if IE]>
+	<link rel="stylesheet" href="css/style_ie.css">
+	<![endif]-->
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- smoother animations -->
+	<script src="js/jquery.easing.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Scrollable navigation -->
+	<script src="js/jquery.nicescroll.min.js"></script>
+	<!-- Growl Like notifications -->
+	<script src="js/jquery.gritter.min.js"></script>
+
+	<!-- Just for demonstration -->
+	<script src="js/demonstration.min.js"></script>
+	<!-- Theme framework -->
+	<script src="js/eakroko.min.js"></script>
+	<!-- Theme scripts -->
+	<script src="js/application.min.js"></script>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+
+</head>
+
+<body data-layout="fixed">
+	<div id="modal-1" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Modal header</h3>
+		</div>
+		<div class="modal-body">
+			<p>One fine body…</p>
+		</div>
+		<div class="modal-footer">
+			<button class="button button-basic" data-dismiss="modal" aria-hidden="true">Close</button>
+			<button class="button button-basic-blue" data-dismiss="modal">Save changes</button>
+		</div>
+	</div>
+	<div id="modal-2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Modal header</h3>
+		</div>
+		<div class="modal-body">
+			<p>One fine body…</p>
+		</div>
+		<div class="modal-footer">
+			<button class="button button-basic" data-dismiss="modal" aria-hidden="true">Close</button>
+			<button class="button button-basic-blue" data-dismiss="modal">Save changes</button>
+		</div>
+	</div>
+	<div id="modal-3" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Modal header</h3>
+		</div>
+		<div class="modal-body">
+			<p>One fine body…</p>
+		</div>
+		<div class="modal-footer">
+			<button class="button button-basic" data-dismiss="modal" aria-hidden="true">No</button>
+			<button class="button button-basic-blue" data-dismiss="modal">Yes</button>
+		</div>
+	</div>
+	<div id="modal-4" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Modal header</h3>
+		</div>
+		<div class="modal-body">
+			<p>One fine body…</p>
+		</div>
+		<div class="modal-footer">
+			<button class="button button-basic-blue" data-dismiss="modal">Ok</button>
+		</div>
+	</div>
+	<div id="top"> 
+		<div class="container-fluid">
+			<div class="pull-left">
+				<a href="#" id="brand"><span></span>ease</a>
+				<div class="collapse-me">
+					<a href="messages.html" class="button">
+						<i class="icon-comment icon-white"></i>
+						Messages
+						<span class="badge badge-important">21</span>
+					</a>
+					<a href="#" class="button">
+						<i class="icon-question-sign icon-white"></i>
+						Support tickets
+						<span class="badge badge-info">3</span>
+					</a>
+					<a href="#" class="button">
+						<i class="icon-truck icon-white"></i>
+						Orders
+						<span class="badge badge-default">5</span>
+					</a>
+				</div>
+			</div>
+			<div class="pull-right">
+				<div class="btn-group">
+					<a href="#" class="button dropdown-toggle" data-toggle="dropdown"><i class="icon-white icon-user"></i>John Doe<span class="caret"></span></a>
+					<div class="dropdown-menu pull-right">
+						<div class="right-details">
+							<h6>Logged in as</h6>
+							<span class="name">John Doe</span>
+							<span class="email">john.doe@example.com</span>
+							<a href="#" class="highlighted-link">Need help?</a>
+							<ul>
+								<li>
+									<a href="#">Getting started</a>
+								</li>
+								<li>
+									<a href="#">Account settings</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<a href="index.html" class="button">
+					<i class="icon-signout"></i>
+					Logout
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="main">
+		<div id="navigation">
+			<div class="search">
+				<i class="icon-search icon-white"></i>
+				<form action="search-page.html" method="get">
+					<input type="text" placeholder="Search here" />
+				</form>
+				<div class="dropdown">
+					<a href="#" class='search-settings dropdown-toggle' data-toggle="dropdown"><i class="icon-cog icon-white"></i></a>
+					<ul class="dropdown-menu">
+						<li class='sort-by'>
+							Sort by <span class='filter'>Categories</span> <span class="order">A-Z</span>
+						</li>
+						<li class="heading">
+							Filter categories
+						</li>
+						<li class='filter active'>
+							Categories
+						</li>
+						<li class="filter">
+							Countries
+						</li>
+						<li class="filter">
+							Likes
+						</li>
+						<li class="heading">
+							Sorting order
+						</li>
+						<li class='order active'>
+							Ascending
+						</li>
+						<li class="order">
+							Descending
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="mainNav" data-open-subnavs="multi">
+				<li>
+					<a href="dashboard.html"><i class="icon-home icon-white"></i><span>Dashboard</span></a>
+				</li>
+				<li>
+					<a href="#"><i class="icon-edit icon-white"></i><span>Forms</span><span class="label">4</span></a>
+					<ul class="subnav">
+						<li>
+							<a href="basic-forms.html">Basic forms</a>
+						</li>
+						<li>
+							<a href="extended-forms.html">Extended form elements</a>
+						</li>
+						<li>
+							<a href="form-validation.html">Form validation</a>
+						</li>
+						<li>
+							<a href="form-wizard.html">Form wizard</a>
+						</li>
+					</ul>
+				</li>
+				<li class='active open'>
+					<a href="#"><i class="icon-th-large icon-white"></i><span>Components</span><span class="label">7</span></a>
+					<ul class="subnav">
+						<li>
+							<a href="messages.html">Messages &amp; Chat</a>
+						</li>
+						<li>
+							<a href="gallery.html">Gallery &amp; thumbs</a>
+						</li>
+						<li>
+							<a href="icons-buttons.html">Icons &amp; buttons</a>
+						</li>
+						<li class='active'>
+							<a href="ui-elements.html">UI Elements</a>
+						</li>
+						<li>
+							<a href="typography.html">Typography</a>
+						</li>
+						<li>
+							<a href="bootstrap-elements.html">Bootstrap elements</a>
+						</li>
+						<li>
+							<a href="grid.html">Grid</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="charts.html"><i class="icon-signal icon-white"></i><span>Charts</span></a>
+				</li>
+				<li>
+					<a href="tables.html"><i class="icon-th-list icon-white"></i><span>Tables</span></a>
+				</li>
+				<li>
+					<a href="error-pages.html"><i class="icon-warning-sign icon-white"></i><span>Error Pages</span></a>
+				</li>
+				<li>
+					<a href="calendar.html"><i class="icon-calendar icon-white"></i><span>Calendar</span></a>
+				</li>
+				<li>
+					<a href="file-management.html"><i class="icon-hdd icon-white"></i><span>File management</span></a>
+				</li>
+				<li>
+					<a href="#"><i class="icon-th icon-white"></i><span>More pages</span><span class="label">4</span></a>
+					<ul class="subnav">
+						<li>
+							<a href="invoice.html">Invoice</a>
+						</li>
+						<li>
+							<a href="search-page.html">Search page</a>
+						</li>
+						<li>
+							<a href="user-profile.html">User profile</a>
+						</li>
+						<li>
+							<a href="blank-page.html">Blank page</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="status button">
+				<div class="status-top">
+					<div class="left">
+						Saving changes...
+					</div>
+				</div>
+				<div class="status-bottom">
+					<div class="progress">
+						<div class="bar" style="width:60%">60%</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div id="content">
+			<div class="page-header">
+				<div class="pull-left">
+					<h4><i class="icon-reorder"></i> UI Elements</h4>
+				</div>
+				<div class="pull-right">
+					<ul class="bread">
+						<li><a href="dashboard.html">Home</a><span class="divider">/</span></li>
+						<li><a href="messages.html">Components<span class="divider">/</span></a></li>
+						<li class='active'>UI Elements</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="container-fluid" id="content-area">
+				<div class="row-fluid">
+					<div class="span6">
+						<div class="box">
+							<div class="box-head box-tabs">
+								<ul class="tabs">
+									<li class="active">
+										<a href="#t1" data-toggle="tab">
+											<i class="icon-bar-chart"></i>
+											With icon
+										</a>
+									</li>
+									<li>
+										<a href="#t2" data-toggle="tab">Without icon</a>
+									</li>
+									<li>
+										<a href="#t3" data-toggle="tab">Tab #3</a>
+									</li>
+								</ul>
+							</div>
+							<div class="box-body">
+								<div class="tab-content">
+									<div class="tab-pane active" id="t1">
+										<h4>Tab with icon</h4>
+										Lorem ipsum anim ad culpa ex id anim Excepteur esse et do cillum dolor in dolore cillum. Lorem ipsum Ut est consequat pariatur sint ut incididunt nisi dolore occaecat. 
+									</div>
+									<div class="tab-pane" id="t2">
+										<h4>Tab without icon</h4>
+										Lorem ipsum ad proident amet anim voluptate ea. Lorem ipsum voluptate et ex esse mollit labore aliquip culpa dolore culpa anim cillum nulla ut sunt. Lorem ipsum veniam sunt voluptate elit minim incididunt occaecat aute ut ut sunt laboris. Lorem ipsum cupidatat labore elit sit in aliqua nostrud adipisicing minim et mollit sunt Ut cupidatat laboris. Lorem ipsum sunt ut labore nostrud ut aliqua dolor sint cupidatat sit Duis in culpa consectetur exercitation. Lorem ipsum sunt anim reprehenderit elit minim nulla ut. 
+									</div>
+									<div class="tab-pane" id="t3">
+										<h4>Another tab</h4>
+										Lorem ipsum commodo dolor sit in sint anim ad ut non et. Lorem ipsum cillum ex sunt ea irure Ut dolore in labore officia nostrud in anim culpa sit esse. Lorem ipsum elit Duis magna et voluptate Duis non pariatur esse laboris nisi laborum nulla. Lorem ipsum et tempor ea ad in id consectetur incididunt velit Excepteur officia. Lorem ipsum non consectetur Excepteur commodo aute anim sunt. Lorem ipsum pariatur esse nulla mollit Duis ex. Lorem ipsum cillum sit in ad consequat in ad enim incididunt ea laborum pariatur Excepteur aliqua nostrud ut. Lorem ipsum et magna laboris reprehenderit mollit reprehenderit aute Duis aliquip officia nulla. Lorem ipsum dolor Ut dolore in laborum elit dolore quis mollit ut sit Excepteur aute. Lorem ipsum quis et eiusmod in irure tempor ea labore cillum dolore labore eiusmod in occaecat qui ea. Lorem ipsum dolor fugiat deserunt incididunt eiusmod sunt magna reprehenderit sed enim ut cillum. Lorem ipsum irure pariatur exercitation sunt eiusmod dolore Ut do ut ut minim. Lorem ipsum do ea pariatur in anim deserunt Excepteur nisi culpa nisi aliquip culpa veniam ut non. 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-reorder"></i>
+								<span>Accordion</span>
+							</div>
+							<div class="box-body box-body-nopadding">
+								<div class="accordion" id="accordion2">
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+												Collapsible Group Item #1
+											</a>
+										</div>
+										<div id="collapseOne" class="accordion-body collapse in">
+											<div class="accordion-inner">
+												Anim pariatur cliche...Lorem ipsum dolore dolor occaecat dolore elit deserunt incididunt ex sed nostrud aute aliquip ut elit sed nisi. 
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+												Collapsible Group Item #2
+											</a>
+										</div>
+										<div id="collapseTwo" class="accordion-body collapse">
+											<div class="accordion-inner">
+												Anim pariatur cliche...Lorem ipsum Duis occaecat Excepteur est magna tempor ex ea enim sunt mollit proident. Lorem ipsum sed laboris ut adipisicing ut et aute occaecat aute enim occaecat. 
+											</div>
+										</div>
+									</div>
+									<div class="accordion-group">
+										<div class="accordion-heading">
+											<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+												Collapsible Group Item #3
+											</a>
+										</div>
+										<div id="collapseThree" class="accordion-body collapse">
+											<div class="accordion-inner">
+												Anim pariatur cliche...Lorem ipsum do culpa adipisicing quis non nisi ullamco. Lorem ipsum velit dolore qui Excepteur fugiat et dolor proident reprehenderit magna aliqua enim consectetur nisi. Lorem ipsum sit laborum est magna veniam ex ut velit do aliqua amet dolore enim minim eu. Lorem ipsum adipisicing officia occaecat deserunt enim minim veniam sint amet sed consectetur nisi quis. 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-reorder"></i>
+								<span>Modal dialogs &amp; notifications</span>
+							</div>
+							<div class="box-body">
+								<p>
+									<h4>Modals</h4>
+									<a href="#modal-1" role="button" class="button button-basic" data-toggle="modal">Basic modal</a>
+									<a href="#modal-2" role="button" class="button button-basic" data-toggle="modal">Modal with animation</a>
+									<a href="#modal-4" role="button" class="button button-basic" data-toggle="modal">Alert</a>
+									<a href="#modal-3" role="button" class="button button-basic" data-toggle="modal">Confirm</a>
+								</p>
+								<p>
+									<h4>Notifications</h4>
+									<code>pure HTML (<strong>NO</strong> javascript needed!)</code>
+								</p>
+								<p><a href="#modal-1" role="button" class="button button-basic notify" data-notify-title="Success!" data-notify-message="The user has been successfully edited.">Basic notification</a>
+									<a href="#modal-1" role="button" class="button button-basic notify" data-notify-time="2000" data-notify-title="Success!" data-notify-message="The user has been successfully edited.">Timed fade notification (2seconds)</a>
+									<a href="#modal-1" role="button" class="button button-basic notify" data-notify-title="WARNING!" data-notify-message="Please refresh the cache!" data-notify-sticky="true">Sticky notification</a>
+									<a href="#modal-1" role="button" class="button button-basic notify" data-notify-title="WARNING!" data-notify-message="Please refresh the cache!" data-notify-image="http://www.placehold.it/100&text=Notification">Notification with image</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-reorder"></i>
+								<span>Tooltips &amp; popovers</span>
+							</div>
+							<div class="box-body">
+								<p>
+									<h4>Tooltips</h4>
+									<a href="#" class="button button-basic" rel="tooltip" title="Default Tooltip">Default tooltip</a>
+									<a href="#" class="button button-basic" rel="tooltip" title="Right Tooltip" data-placement="right">Right tooltip</a>
+									<a href="#" class="button button-basic" rel="tooltip" title="Left Tooltip" data-placement="left">Left tooltip</a>
+									<a href="#" class="button button-basic" rel="tooltip" title="Bottom Tooltip" data-placement="bottom">Bottom tooltip</a>
+								</p>
+								<p>
+									<h4>Popover</h4>
+									<a href="#" class="button button-basic" rel="popover" data-trigger="hover" title="Default popover" data-content="Lorem ipsum et dolor aute deserunt nisi do. Lorem ipsum irure aute officia id pariatur ex adipisicing deserunt velit consequat cupidatat adipisicing commodo. Lorem ipsum ad fugiat velit elit et non id. ">Default popover</a>
+									<a href="#" class="button button-basic" rel="popover" data-trigger="hover" title="Right popover" data-placement="top" data-content="Lorem ipsum et dolor aute deserunt nisi do. Lorem ipsum irure aute officia id pariatur ex adipisicing deserunt velit consequat cupidatat adipisicing commodo. Lorem ipsum ad fugiat velit elit et non id. ">Top popover</a>
+									<a href="#" class="button button-basic" rel="popover" data-trigger="hover" title="Left popover" data-placement="left" data-content="Lorem ipsum et dolor aute deserunt nisi do. Lorem ipsum irure aute officia id pariatur ex adipisicing deserunt velit consequat cupidatat adipisicing commodo. Lorem ipsum ad fugiat velit elit et non id. ">Left popover</a>
+									<a href="#" class="button button-basic" rel="popover" data-trigger="hover" title="Bottom popover" data-placement="bottom" data-content="Lorem ipsum et dolor aute deserunt nisi do. Lorem ipsum irure aute officia id pariatur ex adipisicing deserunt velit consequat cupidatat adipisicing commodo. Lorem ipsum ad fugiat velit elit et non id. ">Bottom popover</a>
+									<a href="#" class="button button-basic" rel="popover" title="Hover popover" data-placement="top" data-content="Lorem ipsum et dolor aute deserunt nisi do. Lorem ipsum irure aute officia id pariatur ex adipisicing deserunt velit consequat cupidatat adipisicing commodo. Lorem ipsum ad fugiat velit elit et non id. ">Click popover</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="navi-functions">
+		<div class="btn-group btn-group-custom">
+			<a href="#" class="button button-square layout-not-fixed notify" rel="tooltip" title="Toggle fixed-nav" data-notify-message="Fixed nav is now {{state}}" data-notify-title="Toggled fixed nav">
+				<i class="icon-unlock"></i>
+			</a>
+			<a href="#" class="button button-square layout-not-fluid notify button-active" rel="tooltip" title="Toggle fixed-layout" data-notify-message="Fixed layout is now {{state}}" data-notify-title="Toggled fixed layout">
+				<i class="icon-exchange"></i>
+			</a>
+			<a href="#" class="button button-square notify notify-inverse layout-no-nav" rel="tooltip" title="Toggle navigation" data-notify-message="Navigation is now {{state}}" data-notify-title="Toggled navigation">
+				<i class="icon-arrow-left"></i>
+			</a>
+			<a href="#" class="button button-square button-active force-last notify-toggle toggle-active notify" rel="tooltip" title="Toggle notification"  data-notify-message="Notifications turned {{state}}" data-notify-title="Toggled notifications">
+				<i class="icon-bullhorn"></i>
+			</a>
+		</div>
+	</div>
+	
+</body>
+</html>
+

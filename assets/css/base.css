@@ -1,0 +1,1463 @@
+/*!
+* ===============================================
+* Table of Contents
+* ===============================================
+*
+* 1. Colors, Text Selection Color
+* 2. Selection Colors
+* 3. Body
+* 4. Rating Stars
+* 5. Header
+* 6. Generic Arrows
+* 7. Top Main Menu
+* 7.1 Top Submenu
+* 8. Homepage Big Slider
+* 8.1 Homepage Big Slider - Styling Next and Prev buttons
+* 8.2 Homepage Big Slider - Styling Pagination
+* 9. Homepage Boxes
+* 9.1 Success Stories Widget
+* 9.1.1 Success Stories Widget - Styling Next and Prev buttons
+* 9.1.2 Button free consult
+* 9.2 Healthy Recipes Box
+* 9.3 Search Box
+* 9.4 Programs Box
+* 9.5 Good To Know Box
+* 9.6 Dieticians Box
+* 9.7 Todays Recipe Box
+* 9.8 Testimonials Users
+* 10. Owl Carousel - Partners
+* 10.1 Owl Carousel - Partners - Styling Next and Prev buttons
+* 10.2 Owl Carousel - Partners -  Styling Pagination
+* 11. Footer
+* 11.1 Footer About
+* 12. Breadcrumbs
+* 12.1 Search Breadcrumbs
+* 13. Main Content Container
+* 13.1 Sidebar Menu
+* 13.2 Sidebar Widgets
+* 13.3 Categories Widgets
+* 13.4 Tag Cloud Widget
+* 13.5 Blog Search Widget
+* 13.6 Recipe Widget
+* 13.7 Facebook Widget
+* 13.8 Custom HTML Widget
+* 14. Main Content Box
+* 15. Pagination
+* 16. Book free consult button
+* 17. Services Page
+* 18. Recipes Filters
+* 19. Recipes List
+* 20. Recipes Details
+* 20.1 Social Share
+* 20.2 Recipes Gallery
+* 20.3 Recipes Ingredients
+* 20.4 Recipes Directions
+* 20.5 Might Also Like Box
+* 20.6 Comments
+* 21. Pages / Pricing
+* 21.1 Pages / Pricing - Pricing Table
+* 22. Pages / Corporate
+* 23. Blog List
+* 23.1 Blog Details Page
+* 24. Contact Page - Request Consult
+* 25. Contact Page - Where to find us
+* 26. 404 Page
+* 27. Shortcodes that can be used in the post-entry area
+* 28. Lightbox Dietician
+* 29. Go To Top Button
+*
+*/
+
+/* 1. Colors, Text Selection Color
+================================================== */
+::-webkit-input-placeholder {
+    color: #29af61;
+}
+:-moz-placeholder {
+    color: #29af61;
+}
+::-moz-focus-inner {
+    border: 0;
+}
+.placeholder {
+    color: #29af61;
+}
+a {
+    color: #29af61;
+    text-decoration: none;
+    outline: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active, a:focus {
+    outline: none;
+}
+.text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 2. Selection Colors
+================================================== */
+::-moz-selection {
+    color: #ffffff;
+    background: #29af61;
+}
+::selection {
+    color: #ffffff;
+    background: #29af61;
+}
+
+/* 3. Body
+================================================== */
+body {
+    color: #737373;
+    background-color: #fff;
+    font: 12px/1.5 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #316890;
+}
+h4 {
+    font: bold 14px Arial;
+    color: #4c4c4c;
+    line-height: 18px;
+    margin: 10px 0px 0px 0px;
+}
+h5 {
+    font: bold 12px Arial;
+    color: #4c4c4c;
+    line-height: 18px;
+    margin: 10px 0px 0px 0px;
+}
+
+ul, ol {
+    margin: 0 0 10px 10px;
+}
+/* 4. Rating Stars
+================================================== */
+.rating-stars [class^="icon-"],
+.rating-stars [class*=" icon-"] {
+    width: 15px;
+    height: 13px;
+    *margin-right: .3em;
+    background-image: url("images/main-sprite.png");
+    background-position: -150px -113px;
+    background-repeat: no-repeat;
+    margin-top: 1px;
+}
+.rating-stars .icon-star {
+    background-position: -150px -113px;
+}
+.rating-stars .icon-star-empty {
+    background-position: -168px -113px;
+}
+
+/* 5. Header
+================================================== */
+.header-container {
+    position: relative;
+    z-index: 10;
+}
+#dn-header {
+    float: left;
+    width: 100%;
+    margin: 20px 0px 0px 0px;
+}
+#dn-header .dn-logo, .dn-banner760 {
+    float: left;
+    margin: 0px 40px 0px 0px;
+}
+#dn-header .dn-free-consult {
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    width: 140px;
+    float: right;
+}
+#dn-header .dn-free-consult h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #29af61;
+    text-align: center;
+    line-height: 15px;
+}
+#dn-header .dn-free-consult p {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #b7b7b7;
+    text-align: center;
+    line-height: 15px;
+}
+span.blue {
+    color: #2980b9;
+}
+
+
+/* 6. Generic Arrows
+================================================== */
+span.arrow-bottom {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -8px;
+}
+span.arrow-down {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 5px 6px 0px 6px;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -8px;
+}
+span.arrow-left {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 6px 0px 6px 6px;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -8px;
+}
+span.arrow-right {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 6px 6px 6px 0px;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -8px;
+
+}
+span.arrow-right.green {
+    border-color: transparent #27ae60 transparent transparent ;
+}
+span.arrow-left.blue {
+    border-color: transparent transparent transparent #2980b9;
+}
+span.arrow-down.green {
+    border-color: #27ae60 transparent transparent transparent;
+}
+span.arrow-down.blue {
+    border-color: #428abe transparent transparent transparent;
+}
+span.arrow-down.brown {
+    border-color: #6c4823 transparent transparent transparent;
+}
+span.arrow-bottom.blue {
+    border-color: transparent transparent #2980b9 transparent;
+}
+span.arrow-bottom.white {
+    border-color: transparent transparent #fff transparent;
+}
+span.arrow-bottom.green {
+    border-color: transparent transparent #27ae60 transparent;
+}
+.arrow-down-img {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    bottom: -2px;
+    left: 0;
+    display: table;
+}
+.arrow-down-img span {
+    display: table-cell;
+}
+.arrow-down-img span:first-child {
+    width: 22px;
+    border-left: 1px solid #EDEDED;
+}
+.arrow-down-img span:last-child {
+    border-right: 1px solid #EDEDED;
+}
+.arrow-down-img span.green-line {
+    border-top: 2px solid #28ae61;
+    background: #fff;
+}
+.arrow-down-img span.the-arrow {
+    background: url('images/main-sprite.png') no-repeat -19px -60px;
+    width: 13px;
+}
+.arrow-up-img {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: -7px;
+    left: 0;
+    display: table;
+}
+.arrow-up-img span {
+    display: table-cell;
+}
+.arrow-up-img span:first-child {
+    width: 86%;
+    border-left: 1px solid #EDEDED;
+}
+.arrow-up-img span:last-child {
+    border-right: 1px solid #EDEDED;
+}
+.arrow-up-img span.blue-line {
+    border-bottom: 2px solid #3b81bb;
+    background: #fff;
+}
+.arrow-up-img span.the-arrow {
+    background: url('images/main-sprite.png') no-repeat -25px -77px;
+    width: 13px;
+    height: 6px;
+}
+
+/* 7. Top Main Menu
+================================================== */
+#dn-main-menu-background {
+    float: left;
+    width: 100%;
+    height: 70px;
+    margin: 25px 0px 0px 0px;
+}
+.menu-main-menu-container {
+    width: 100%;
+}
+#dn-main-menu {
+    float: left;
+    width: 100%;
+    height: inherit;
+}
+#dn-main-menu ul.menu-items {
+    margin: 0;
+    float: left;
+    width: 100%;
+    height: inherit;
+}
+#dn-main-menu ul.menu-items span.arrow-bottom {
+    display: none;
+}
+
+#dn-main-menu ul.menu-items > li {
+    list-style: none;
+    display: block;
+    float: left;
+    width: auto;
+    height: inherit;
+    position: relative;
+    margin-right: -1px; /* Remove the Space Between Inline Block Elements */
+    border-left: 1px solid #e0e1dc;
+    border-right: 1px solid #e0e1dc;
+    border-top: 1px solid #e0e1dc;
+    border-bottom: 1px solid #e0e1dc;
+    background-color: #fff;
+}
+#dn-main-menu ul.menu-items > li:first-child {
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+#dn-main-menu ul.menu-items > li:first-child > a {
+    padding-left: 38px;
+}
+
+#dn-main-menu ul.menu-items > li:last-child {
+    -moz-border-radius: 0 3px 3px 0;
+    -webkit-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+/* safari fix */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #dn-main-menu ul.menu-items > li:last-child a {
+        padding-right: 29px;
+    }
+}
+#dn-main-menu ul.menu-items li a {
+    color: #2c3e50;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0px 0px 0px 0px;
+    line-height: 50px;
+    padding: 20px 31px 0px 31px;
+    display: block;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    text-rendering: optimizeLegibility;
+
+}
+#dn-main-menu ul.menu-items > li.on {
+    background-color:#fafafa;
+}
+#dn-main-menu ul.menu-items > li.on > a {
+    line-height: 42px;
+}
+#dn-main-menu ul.menu-items > li > a span {
+    position: relative;
+    bottom: -7px;
+}
+#dn-main-menu ul.menu-items li a:hover {
+    color: #2980b9;
+    text-decoration: none;
+}
+#dn-main-menu ul.menu-items li a i.menu-icon {
+    width: 32px;
+    height: 24px;
+    background-image: url(/assets/images/menu-sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    margin-left: -16px;
+    text-align: center;
+}
+#dn-main-menu ul.menu-items li a i.home {
+    background-position: 0 0;
+}
+#dn-main-menu ul.menu-items > li a:hover i.home,
+#dn-main-menu ul.menu-items > li.on a i.home {
+    background-position: 0 -24px;
+}
+#dn-main-menu ul.menu-items > li a i.diet {
+    background-position: -32px 0px;
+}
+#dn-main-menu ul.menu-items > li a:hover i.diet,
+#dn-main-menu ul.menu-items > li.on a i.diet {
+    background-position: -32px -24px;
+}
+#dn-main-menu ul.menu-items > li a i.before-after {
+    background-position: -64px 0px;
+}
+#dn-main-menu ul.menu-items > li a:hover i.before-after,
+#dn-main-menu ul.menu-items > li.on a i.before-after {
+    background-position: -64px -24px;
+}
+#dn-main-menu ul.menu-items > li a i.our-team {
+    background-position: -96px 0px;
+}
+#dn-main-menu ul.menu-items > li a:hover i.our-team,
+#dn-main-menu ul.menu-items > li.on a i.our-team {
+    background-position: -96px -24px;
+}
+#dn-main-menu ul.menu-items > li a i.recipes-book {
+    background-position: -128px 0px;
+}
+#dn-main-menu ul.menu-items > li a:hover i.recipes-book,
+#dn-main-menu ul.menu-items > li.on a i.recipes-book {
+    background-position: -128px -24px;
+}
+#dn-main-menu ul.menu-items > li a i.pages {
+    background-position: -160px 0px;
+}
+#dn-main-menu ul.menu-items > li a:hover i.pages,
+#dn-main-menu ul.menu-items > li.on a i.pages {
+    background-position: -160px -24px;
+}
+#dn-main-menu ul.menu-items > li a i.contact {
+    background-position: -192px 0px;
+}
+#dn-main-menu ul.menu-items > li a:hover i.contact,
+#dn-main-menu ul.menu-items > li.on a i.contact {
+    background-position: -192px -24px;
+}
+
+#dn-main-menu ul.menu-items > li a i.shop {
+    background-position: -223px 0px;
+}
+#dn-main-menu ul.menu-items > li a:hover i.shop,
+#dn-main-menu ul.menu-items > li.on a i.shop {
+    background-position: -223px -24px;
+}
+#dn-main-menu ul.menu-items > li.on > span.arrow-bottom {
+    display: none;
+}
+#dn-main-menu ul.menu-items > li.on > a {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    height: 42px;
+    color: #2980b9;
+}
+#dn-main-menu ul.menu-items > li:first-child.on {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    overflow: hidden;
+}
+#dn-main-menu ul.menu-items > li.on:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+}
+
+/* 7.1 Top Submenu
+================================================== */
+#dn-main-menu ul.menu-items li ul {
+    z-index: 9999999;
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    margin: 0px 0px 0px 0px;
+    background: #fff;
+    background: rgba(255,255,255, 0.95);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.36);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.36);
+    box-shadow: 0 1px 1px rgba(0,0,0,.36);
+}
+#dn-main-menu ul.menu-items > li:hover > ul {
+    display: block;
+}
+#dn-main-menu ul.menu-items > li > ul > li:hover ul {
+    display: block;
+}
+#dn-main-menu ul.menu-items li ul li {
+    display: block;
+    width: 100%;
+    border: none;
+    position: relative;
+}
+#dn-main-menu ul.menu-items li ul li a {
+    color: #29AF61;
+    display: block;
+    font-family: 'Cabin',sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    padding: 7px 2% !important;
+    text-indent: 5px;
+    width: 96%;
+}
+#dn-main-menu ul.menu-items li ul li ul {
+    left: 150px;
+    position: absolute;
+    display: none;
+    top: 0;
+}
+#dn-main-menu ul.menu-items li ul li a:hover {
+    color: #428abe;
+    background: #fff;
+}
+#dn-main-menu ul.menu-items li .dn-submenu-services {
+    width: 210px;
+}
+#dn-main-menu ul.menu-items li .dn-submenu-pages {
+    width: 150px;
+}
+#dn-main-menu ul.menu-items li .dn-submenu-recipes-book {
+    width: 150px;
+}
+#dn-main-menu ul.menu-items li .dn-submenu-shop {
+    width: 150px;
+}
+
+/* 8. Homepage Big Slider
+================================================== */
+#homepage-slider-container {
+    display: block;
+}
+
+.slider-slideshow {
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    margin: 24px 0px 0px 0px;
+    overflow: hidden;
+    display:block;
+    position: relative;
+}
+.dn-slider {
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    margin: 0px 0px 20px 0px;
+}
+.dn-slider .dn-slider-background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 395px;
+    z-index: 0;
+    background: none;
+}
+
+.dn-slider .dn-slider-background .canvas-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.dn-slider #dn-main-slider {
+    margin: 12px 0px 12px 0px;
+}
+.dn-slider #dn-main-slider .img-circle-container {
+    display: block;
+    border: 3px solid #FFFFFF;
+    height: 290px;
+    width: 290px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
+}
+.dn-slider #dn-main-slider .img-circle {
+    width: 290px;
+    height: 290px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -khtml-border-radius: 50%;
+}
+
+.dn-slider #dn-main-slider .item {
+    margin: 0px 0px 0px 60px;
+    position: relative;
+}
+.dn-slider #dn-main-slider .item .slide-text {
+    width: 260px;
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(0,0,0,.5);
+}
+.dn-slider #dn-main-slider .item .slide-text h2 {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #fff;
+}
+.dn-slider #dn-main-slider .item .slide-text h3 {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+.dn-slider #dn-main-slider .item .slide-text p {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 13px;
+    margin: 20px 0px 0px 0px;
+}
+.dn-slider #dn-main-slider .item .slide-text a {
+    color: #fff;
+}
+.dn-slider #dn-main-slider .owl-theme .owl-controlls {
+    margin-top: 10px;
+    text-align: center;
+}
+.dn-slider #dn-main-slider .owl-theme .item {
+    height: 63px;
+    background-color: #fff;
+    text-align: center;
+    margin: 0px 10px 0px 0px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+/* 8.1 Homepage Big Slider  - Styling Next and Prev buttons
+================================================== */
+.dn-slider #dn-main-slider .owl-controlls .owl-buttons div {
+    position: absolute;
+    top: 120px;
+    width: 23px;
+    height: 41px;
+    overflow: hidden;
+    text-indent: -1000px;
+    background: url('images/main-sprite.png') no-repeat top left;
+}
+.dn-slider #dn-main-slider .owl-controlls .owl-buttons .owl-prev {
+    left: 10px;
+    background-position: -39px 0px;
+}
+.dn-slider #dn-main-slider .owl-controlls .owl-buttons .owl-prev:hover {
+    background-position: -39px -41px;
+}
+.dn-slider #dn-main-slider .owl-controlls .owl-buttons .owl-next {
+    right: 20px;
+    background-position: -62px 0px;
+}
+.dn-slider #dn-main-slider .owl-controlls .owl-buttons .owl-next:hover {
+    background-position: -62px -41px;
+}
+.dn-slider #dn-main-slider .owl-controlls.clickable .owl-buttons div:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+.dn-slider #dn-main-slider .owl-pagination {
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: 440px;
+}
+
+/* 8.2 Homepage Big Slider  - Styling Pagination
+================================================== */
+.dn-slider #dn-main-slider .owl-controlls .owl-page {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    background-color: rgba(255,255,255, 0.6);
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,.3);
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+    margin: 0px 8px 0px 0px;
+}
+.dn-slider #dn-main-slider .owl-controlls .owl-page.active {
+    background-color: #fff;
+}
+
+/* 9. Homepage Boxes
+================================================== */
+/* 9.1 Success Stories Widget
+================================================== */
+.container{
+    width: 995px;
+}
+.container .slider-widget {
+    background: none !important;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-top: 25px;
+    border-bottom: 4px solid #2980b9 !important;
+    position: relative;
+}
+/* fix for out of the box elements */
+.container .slider-widget .owl-wrapper-outer {
+    padding-top: 15px;
+    margin-top: -15px;
+}
+.container .slider-widget h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #2980b9;
+    margin: 0px 0px 0px 15px;
+    line-height: 20px;
+    padding-top: 10px;
+}
+.container .slider-widget h3 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #27ae60;
+    margin: 10px 0px 0px 15px;
+    line-height: 20px;
+}
+.container .slider-widget span.arrow-bottom {
+    bottom: 0px;
+    left: 20px;
+}
+.container .slider-widget .before-picture {
+    width: 94px;
+    height: 93px;
+    background-color: #fff;
+    border: 3px solid #ebebeb;
+    margin: 10px 0px 0px 10px;
+    display:inline-block;
+}
+.container .slider-widget .before-picture img {
+    width: 94px;
+    height: 93px;
+}
+.container .slider-widget .after-picture {
+    position: absolute;
+    right: 6px;
+    top: -15px;
+}
+.container .slider-widget .after-picture img {
+    height: 240px;
+    width:80px;
+}
+.container .slider-widget .libs {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #2980b9;
+    margin: 20px 0px 0px 15px;
+    line-height: 10px;
+    float: left;
+}
+.container .slider-widget .sizes {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #515151;
+    width: 100%;
+    margin: 20px 0px 0px 15px;
+    line-height: 10px;
+    float: left;
+}
+.container .slider-widget .results {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    color: #8f8f8f;
+    margin: 10px 10px 0px 0px;
+    line-height: 10px;
+    float: right;
+}
+#dn-top-widget-slider.owl-theme .owl-controlls {
+    margin-top: 0px;
+}
+#dn-top-widget-slider .item {
+    height: 315px;
+    background-color: #fafafa;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;
+    border: 1px solid #ededed;
+}
+/* 9.1.1 Success Stories Widget - Styling Next and Prev buttons
+================================================== */
+#dn-top-widget-slider .owl-controlls .owl-buttons div {
+    position: absolute;
+    top: 25px;
+    width: 7px;
+    height: 12px;
+    overflow: hidden;
+    text-indent: -1000px;
+    background: url('images/main-sprite.png') no-repeat top left;
+}
+#dn-top-widget-slider .owl-controlls .owl-buttons .owl-prev {
+    right: 20px;
+    background-position: 0px -60px;
+}
+#dn-top-widget-slider .owl-controlls .owl-buttons .owl-prev:hover {
+    background-position: 0px -72px;
+}
+#dn-top-widget-slider .owl-controlls .owl-buttons .owl-next {
+    right: 8px;
+    background-position: -7px -60px;
+}
+#dn-top-widget-slider .owl-controlls .owl-buttons .owl-next:hover {
+    background-position: -7px -72px;
+}
+#calendar_wrap table{
+    width:100%;
+}
+
+
+/* 9.1.2 Button free consult
+================================================== */
+a.btn-free-consult {
+    width: 85%;
+    -webkit-border-radius: 18px/17px 17px 18px 18px;
+    -moz-border-radius: 18px/17px 17px 18px 18px;
+    border-radius: 18px/17px 17px 18px 18px;
+    background-color: #27ae60;
+    color: #fff;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    border: none;
+    margin: 20px 0px 0px 10px;
+    padding: 6px 0 4px 13px ;
+    float: left;
+}
+a.btn-free-consult .icon {
+    width: 38px;
+    height: 26px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    float: right;
+    background: #fff url(images/main-sprite.png);
+    background-position: -43px -85px;
+    background-repeat: no-repeat;
+    margin-top: -2px;
+    margin-right:3px;
+    display: block;
+    float: right;
+}
+
+/* 9.2. Healthy Recipes Box
+================================================== */
+.container .healthy-recipes {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.container .healthy-recipes .content-container {
+    width: 99.5%;
+    min-height: 90px;
+}
+.container .healthy-recipes .image-container-healthy-recipes {
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    background-color: #fff;
+    position: relative;
+    bottom: -1px;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+}
+.container .healthy-recipes .image-container-healthy-recipes img {
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+}
+.container .content-container {
+    border: 1px solid #ededed;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px ;
+    border-radius: 0 0 3px 3px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    float: left;
+}
+.container .content-container .content-title {
+    border-right: 1px solid #d8d8d8;
+    text-align: center;
+}
+.container .content-container .content-title h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 600;
+    font-size: 170%;
+    text-transform: uppercase;
+    color: #2c3e50;
+    margin: 20px 0px 0px 0px;
+    line-height: 28px;
+}
+.container .content-container .content-title h2 span.bold {
+    font-weight: 700;
+}
+.container .content-container p {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 13px;
+    color: #484848;
+    margin: 10px 0px 0px 0px;
+    padding: 8px;
+    line-height: 18px;
+}
+.container .link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #2980b9;
+    margin: 0px 0px 0px 8px
+}
+.container .link-icon {
+    width: 16px;
+    height: 16px;
+    background-image: url(images/main-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -26px -88px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2980b9;
+    padding: 0 0 0 20px;
+    margin: 0px 0px 0px 0px;
+}
+.container a.link:hover {
+    text-decoration: none;
+    color: #27ae60;
+}
+.container .dieticians .text-container .link {
+    float: left;
+    margin: 0px 0px 0px 5px;
+}
+.container .dieticians .text-container .link .link-icon {
+    margin: 0px 0px 0px 0px;
+}
+.container .dieticians .text-container .link-icon {
+    background-position: -26px -88px;
+    height: 18px;
+}
+
+/* 9.3 Search Box
+================================================== */
+.container .search {
+    height: 145px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-left: 0px;
+    border-top: 4px solid #6c4823;
+    position: relative;
+    background-image: url(images/search-background.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% 100%;
+}
+.container .search span.arrow-down {
+    top: 0px;
+}
+.container .search h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #6c4823;
+    text-align: center;
+    line-height: 30px;
+}
+.container .search p {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #a5896b;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    line-height: 20px;
+}
+.container .search span {
+    letter-spacing: -3px;
+}
+.container .search .search-box {
+    float: left;
+    margin: 15px 0px 0px 65px;
+}
+.container .search .input-search {
+    width: 120px;
+    height: 29px;
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0 5px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #737373;
+}
+.search-btn {
+    width: 31px;
+    height: 31px;
+    -webkit-border-radius: 15px 16px 16px 15px/15px 15px 16px 16px;
+    -moz-border-radius: 15px 16px 16px 15px/15px 15px 16px 16px;
+    border-radius: 15px 16px 16px 15px/15px 15px 16px 16px;
+    background-color: #29af61;
+    background-image: url(images/main-sprite.png);
+    background-repeat: no-repeat;
+    background-position: 5px -104px;
+    border: none;
+    margin: -10px 0px 0px -15px;
+}
+.search-btn:hover,
+.search-btn:focus,
+.search-btn:active,
+.search-btn.active,
+.search-btn.disabled,
+.search-btn[disabled] {
+    color: #fff;
+    background-color: #2980b9;
+    -o-transition: color .5s ease-out, background 1s ease-in;
+    -ms-transition: color .5s ease-out, background 1s ease-in;
+    -moz-transition: color .5s ease-out, background 1s ease-in;
+    -webkit-transition: color .5s ease-out, background 1s ease-in;
+    transition: color .5s ease-out, background 1s ease-in;
+}
+
+/* 9.4 Programs Box
+================================================== */
+.container .programs {
+    border: 1px solid #ededed;
+    height: 125px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-left: 0px;
+    margin-top: 15px;
+    position: relative;
+    border-left: 4px solid #2980b9;
+}
+.container .programs .link {
+    margin: 0px 0px 0px 15px
+}
+.container .dieticians .text-container .link {
+    margin: 0px 0px 0px 10px;
+
+}
+.container .programs span.arrow-left {
+    left: 6px;
+    top: 13px;
+}
+.container .programs h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #2980b9;
+    line-height: 10px;
+    margin: 15px 0px 0px 15px;
+}
+.container .programs p {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 12px;
+    color: #484848;
+    margin: 10px 0px 5px 10px;
+    padding: 8px;
+    line-height: 18px;
+}
+
+/* 9.5 Good To Know Box
+================================================== */
+.container .good-to-know {
+    border: 1px solid #ededed;
+    height: 145px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+.container .good-to-know .calories {
+    float: left;
+    width: 50%;
+    border-right: 1px solid #d8d8d8;
+    height: 65px;
+    text-align: center;
+}
+.container i.icon-cake {
+    width: 39px;
+    height: 38px;
+    background-image: url(images/main-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -219px -45px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #2980b9;
+    padding: 0 0 0 16px;
+    margin: 20px 2px 0px 15px;
+    float: left;
+}
+.container .good-to-know span {
+    color: #879299;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 40px;
+}
+.container .good-to-know p {
+    color: #646c71;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 10px;
+}
+.container .good-to-know .carbs {
+    float: left;
+    height: 65px;
+    text-align: center;
+    width: 50%;
+    margin-left: -1px;
+}
+.container .good-to-know .name {
+    float: left;
+    width: 100%;
+    background-color: #28ae61;
+    height: 80px;
+}
+.container .good-to-know .name img {
+    float: left;
+    margin: 20px 0px 0px 20px;
+}
+.container .good-to-know .name p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 10px;
+    color: #60d291;
+    margin: 25px 0px 0px 15px;
+    float: left;
+}
+.container .good-to-know .name h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 10px;
+    color: #ffffff;
+    margin: 10px 0px 0px 15px;
+    float: left;
+}
+.container .good-to-know .name h3 a {
+    color: #fff;
+}
+
+/* 9.6 Dieticians Box
+================================================== */
+.container .dieticians {
+    border: 1px solid #ededed;
+    height: 145px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-top: 20px;
+    position: relative;
+    border-right: 4px solid #27ae60;
+}
+.container .dieticians span.arrow-right {
+    left: auto;
+    right: -1px;
+    top: 15px;
+}
+.container .dieticians .image-container-dietician {
+    width: 100%;
+    border-right: 1px solid #ededed;
+    float: left;
+}
+.container .dieticians .image-container-dietician img {
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+.container .dieticians .text-container {
+    float: left;
+}
+.container .dieticians .text-container h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #28ae61;
+    line-height: 10px;
+    margin: 20px 25px 10px 0px;
+    float: right;
+}
+.container .dieticians .text-container p {
+    font-family:Arial;
+    font-weight: 400;
+    font-size: 12px;
+    color: #484848;
+    margin: 0px 10px 5px 0px;
+    padding: 8px;
+    line-height: 18px;
+    float: left;
+}
+
+/* 9.7 Todays Recipe Box
+================================================== */
+.container .todays-recipe {
+    background-color: #fff;
+    position: relative;
+}
+.container .todays-recipe .border-container {
+    border-top: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    float: left;
+}
+.container .todays-recipe .recipes-titles {
+    float: left;
+}
+.container .todays-recipe .recipes-titles h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #80868e;
+    line-height: 10px;
+    margin: 15px 0px 10px 10px;
+}
+.container .todays-recipe .recipes-titles h2 a {
+    color: #80868e;
+    text-decoration: none;
+}
+.container .todays-recipe .recipes-titles h2 a:hover {
+    color: #2c3e50;
+    text-decoration: none;
+}
+.container .todays-recipe .recipes-titles h3 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #80868e;
+    line-height: 10px;
+    margin: 20px 0px 10px 10px;
+}
+.container .todays-recipe .recipes-titles p {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #3788be;
+    line-height: 10px;
+    margin: 15px 0px 10px 10px;
+}
+.container .todays-recipe .recipes-ingredients {
+    float: left;
+    width: 100%;
+}
+.container .todays-recipe .recipes-ingredients .row-gray {
+    background-color: #ededed;
+    width: 100%;
+    float: left;
+}
+.container .todays-recipe .recipes-ingredients .row-white {
+    background-color: #fff;
+    width: 100%;
+    float: left;
+}
+.container .todays-recipe .recipes-ingredients .row-gray p,
+.container .todays-recipe .recipes-ingredients .row-white p {
+    color: #747474;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 12px 0px 5px 10px;
+    line-height: 10px;
+    float: left;
+}
+.container .todays-recipe .recipes-ingredients .row-gray .units ,
+.container .todays-recipe .recipes-ingredients .row-white .units {
+    color: #ababab;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 12px 10px 5px 10px;
+    line-height: 10px;
+    float: right;
+}
+.container .todays-recipe .image-container {
+    margin: 7px 0px 0px 0px;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.container .todays-recipe .image-container a {
+    display: block;
+    border: 1px solid #E5E5E5;
+    overflow: hidden;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+    border-top: none;
+}
+.container .todays-recipe .image-container img {
+    border: none;
+}
+.container .todays-recipe .image-container .arrow-bottom {
+    top: -6px;
+    left: 140px;
+}
+.container .todays-recipe .image-container span.arrow-bottom.white {
+    top: -4px;
+    left: 140px;
+}
+/* 9.8 Testimonials Users
+================================================== */
+.testimonial-box {
+    margin-bottom: 20px;
+}
+.image-testimonial {
+    width:110px;
+    height: 110px;
+    -webkit-border-radius: 74px;
+    -moz-border-radius: 74px;
+    border-radius: 74px;
+    background-color: #fff;
+    position: relative;
+    left: 50%;
+    margin-left: -55px;
+    top: 35px;
+}
+.image-testimonial img {
+    width: 110px;
+    height: 110px;
+}
+.testimonial-box p {
+    width: 100%;
+}
+.main-container {
+    width: 220px;
+    height: 120px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fafafa;
+    margin: -80px 0px 0px 0px;
+
+    padding-top: 100px;
+}
+.main-container h2 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #2c3e50;
+    line-height: 10px;
+    margin: 30px 0px 0px 0px;
+    text-align: center;
+}
+.main-container p {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 12px;
+    color: #787878;
+    margin: 10px 0px 1px 10px;
+    padding: 8px;
+    line-height: 18px;
+    float: left;
+    text-align: left;
+}
+i.read-more-icon-sm {
+    display:none;
+    width: 12px;
+    height: 12px;
+    background-image: url(images/main-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -27px -112px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #2980b9;
+    padding: 0 0 0 16px;
+    margin: 0px 2px 0px 15px;
+}
+a.read-more {
+
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #2980b9;
+    margin: 0px 0px 0px 15px;
+    border: 1px solid transparent;
+
+}
+a.read-more:hover {
+    text-decoration: none;
+    color: #27ae60;
+}
