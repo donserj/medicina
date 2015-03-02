@@ -320,55 +320,20 @@
     </div>
 
     <div class="row-fluid" style="margin-top: 10px;">
+        <?php foreach($homeBottomArticles as $homeBottomArticle){ ?>
         <div class="content-bottom-article">
             <a href="#">
-                <h2>This property specifies the ind entation of the first...</h2>
+                <h2><?php echo $homeBottomArticle['Title'];?></h2>
             </a>
             <img src="/assets/images/doctor.jpg">
             <p>
-                This property specifies the ind entation of the first line of This property specifies the ind entation of the first line of...
+                <?php echo $homeBottomArticle['Text'];?>
             </p>
             <div class="content-bottom-article-footer">
                 <a href="#"> + Read more</a>
             </div>
         </div>
-        <div class="content-bottom-article">
-            <a href="#">
-                <h2>This property specifies the ind entation of the first...</h2>
-            </a>
-            <img src="/assets/images/doctor.jpg">
-            <p>
-                This property specifies the ind entation of the first line of This property specifies the ind entation of the first line of...
-            </p>
-            <div class="content-bottom-article-footer">
-                <a href="#"> + Read more</a>
-            </div>
-        </div>
-        <div class="content-bottom-article">
-            <a href="#">
-                <h2>This property specifies the ind entation of the first...</h2>
-            </a>
-            <img src="/assets/images/doctor.jpg">
-            <p>
-                This property specifies the ind entation of the first line of This property specifies the ind entation of the first line of...
-            </p>
-            <div class="content-bottom-article-footer">
-                <a href="#"> + Read more</a>
-            </div>
-        </div>
-
-        <div class="content-bottom-article">
-            <a href="#">
-                <h2>This property specifies the ind entation of the first...</h2>
-            </a>
-            <img src="/assets/images/doctor.jpg">
-            <p>
-                This property specifies the ind entation of the first line of This property specifies the ind entation of the first line of...
-            </p>
-            <div class="content-bottom-article-footer">
-                <a href="#"> + Read more</a>
-            </div>
-        </div>
+        <?php } ?>
     </div>
     <div class="row-fluid charge-more">
         <input type="button" name="charge-more" value="Incarca mai multe" class="charge-more-btn">
@@ -380,50 +345,22 @@
                 <div class="span6">
                     <h2>Recent Recipes</h2>
                     <div class="latest-recipes">
+                        <?php foreach($recentRecipes1 as $recipes){ ?>
                         <div class="row-fluid">
                             <div class="span5">
                                 <div class="recipe-image-container">
-                                    <a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/sweet-dessert-with-fruits/">
-                                        <img width="220" height="140" src="http://tf.aa-team.com/wordpress/diet_and_nutrition/wp-content/uploads/2013/09/wallpaper-3840371-220x140.jpg" class="attachment-recipes-thumb wp-post-image" alt="wallpaper-384037" />
+                                    <a href="#">
+                                        <img width="220" height="140" src="<?=$recipes['Logo'];?>" class="attachment-recipes-thumb wp-post-image" alt="" style="height: 70px;" />
                                         <span class="mask"> <i class="link-icon-hover"></i>	</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="span11">
-                                <h3><a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/sweet-dessert-with-fruits/">Sweet Dessert with Fruits</a></h3>
-                                <p>I love I love marshmallow dessert powder biscuit donut candy canes. Lo ...</p>
+                                <h3><a href="#"><?=$recipes['Title'];?></a></h3>
+                                <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
                             </div>
                         </div>
-
-                        <div class="row-fluid">
-                            <div class="span5">
-                                <div class="recipe-image-container">
-                                    <a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/strawberry-dessert/">
-                                        <img width="220" height="140" src="http://tf.aa-team.com/wordpress/diet_and_nutrition/wp-content/uploads/2013/09/wallpaper-3000269-220x140.jpg" class="attachment-recipes-thumb wp-post-image" alt="wallpaper-3000269" />
-                                        <span class="mask">	<i class="link-icon-hover"></i>	</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="span11">
-                                <h3><a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/strawberry-dessert/">Strawberry Dessert</a></h3>
-                                <p>Lollipop powder candy canes pudding macaroon bear claw toffee pastry j ...</p>
-                            </div>
-                        </div>
-
-                        <div class="row-fluid">
-                            <div class="span5">
-                                <div class="recipe-image-container">
-                                    <a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/sweet-dessert-with-fruits/">
-                                        <img width="220" height="140" src="http://tf.aa-team.com/wordpress/diet_and_nutrition/wp-content/uploads/2013/09/wallpaper-3840371-220x140.jpg" class="attachment-recipes-thumb wp-post-image" alt="wallpaper-384037" />
-                                        <span class="mask"> <i class="link-icon-hover"></i>	</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="span11">
-                                <h3><a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/sweet-dessert-with-fruits/">Sweet Dessert with Fruits</a></h3>
-                                <p>I love I love marshmallow dessert powder biscuit donut candy canes. Lo ...</p>
-                            </div>
-                        </div>
+                        <?php } ?>
 
                     </div>
 
@@ -432,51 +369,22 @@
                 <div class="span6">
                     <h2>Recent Recipes</h2>
                     <div class="latest-recipes">
-                        <div class="row-fluid">
-                            <div class="span5">
-                                <div class="recipe-image-container">
-                                    <a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/sweet-dessert-with-fruits/">
-                                        <img width="220" height="140" src="http://tf.aa-team.com/wordpress/diet_and_nutrition/wp-content/uploads/2013/09/wallpaper-3840371-220x140.jpg" class="attachment-recipes-thumb wp-post-image" alt="wallpaper-384037" />
-                                        <span class="mask"> <i class="link-icon-hover"></i>	</span>
-                                    </a>
+                        <?php foreach($recentRecipes2 as $recipes){ ?>
+                            <div class="row-fluid">
+                                <div class="span5">
+                                    <div class="recipe-image-container">
+                                        <a href="#">
+                                            <img width="220" height="140" src="<?=$recipes['Logo'];?>" class="attachment-recipes-thumb wp-post-image" alt="" style="height: 70px;" />
+                                            <span class="mask"> <i class="link-icon-hover"></i>	</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="span11">
+                                    <h3><a href="#"><?=$recipes['Title'];?></a></h3>
+                                    <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
                                 </div>
                             </div>
-                            <div class="span11">
-                                <h3><a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/sweet-dessert-with-fruits/">Sweet Dessert with Fruits</a></h3>
-                                <p>I love I love marshmallow dessert powder biscuit donut candy canes. Lo ...</p>
-                            </div>
-                        </div>
-
-                        <div class="row-fluid">
-                            <div class="span5">
-                                <div class="recipe-image-container">
-                                    <a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/strawberry-dessert/">
-                                        <img width="220" height="140" src="http://tf.aa-team.com/wordpress/diet_and_nutrition/wp-content/uploads/2013/09/wallpaper-3000269-220x140.jpg" class="attachment-recipes-thumb wp-post-image" alt="wallpaper-3000269" />
-                                        <span class="mask">	<i class="link-icon-hover"></i>	</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="span11">
-                                <h3><a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/strawberry-dessert/">Strawberry Dessert</a></h3>
-                                <p>Lollipop powder candy canes pudding macaroon bear claw toffee pastry j ...</p>
-                            </div>
-                        </div>
-
-                        <div class="row-fluid">
-                            <div class="span5">
-                                <div class="recipe-image-container">
-                                    <a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/sweet-dessert-with-fruits/">
-                                        <img width="220" height="140" src="http://tf.aa-team.com/wordpress/diet_and_nutrition/wp-content/uploads/2013/09/wallpaper-3840371-220x140.jpg" class="attachment-recipes-thumb wp-post-image" alt="wallpaper-384037" />
-                                        <span class="mask"> <i class="link-icon-hover"></i>	</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="span11">
-                                <h3><a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/sweet-dessert-with-fruits/">Sweet Dessert with Fruits</a></h3>
-                                <p>I love I love marshmallow dessert powder biscuit donut candy canes. Lo ...</p>
-                            </div>
-                        </div>
-
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="span4">
@@ -487,11 +395,9 @@
                         <img src="/assets/images/arrow_down.png">
                     </div>
                     <div>
-                        <p class="top-article-element"><a href="#"><img src="/" class="left"> Link cdimdomc omdmdno on on o o no no n</a></p>
-                        <p class="top-article-element"><a href="#"><img src="/" class="left"> Link cdimdomc omdmd</a></p>
-                        <p class="top-article-element"><a href="#"><img src="/" class="left"> Link cdimdomc omdmdno on on o o no no n</a></p>
-                        <p class="top-article-element"><a href="#"><img src="/" class="left"> Link cdimdomc omdmd</a></p>
-                        <p class="top-article-element"><a href="#"><img src="/" class="left"> Link cdimdomc omdmdno on on o o no no n</a></p>
+                        <?php foreach($topRightArticles as $article){?>
+                        <p class="top-article-element"><a href="#"><img src="<?=$article['Logo'];?>" class="left"> <?php echo $article['Title'];?> </a></p>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
