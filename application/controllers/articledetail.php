@@ -1,12 +1,12 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
 /**
  * Created by PhpStorm.
- * User: donserj
- * Date: 1/13/15
- * Time: 7:30 PM
+ * User: artosis
+ * Date: 3/3/15
+ * Time: 1:22 PM
  */
 
-class Home extends CI_Controller{
+class Articledetail extends CI_Controller {
 
     public $data;
     public $db;
@@ -26,6 +26,7 @@ class Home extends CI_Controller{
         }else{
             $this->lang = 'ro';
         }
+
     }
 
     public function index(){
@@ -42,8 +43,11 @@ class Home extends CI_Controller{
         $this->data['topRightArticles'] = $this->generalmodel->getArticlesByType('topRightArticle', $this->lang, array(0,5), array("column"=> 'AddTime', "method"=>"DESC"));
 
         $this->data['clinics'] = $this->generalmodel->getClinics($this->lang);
-        //var_dump($this->data['homeBottomArticles']);
 
-        $this->load->view('home', $this->data);
+        $this->load->view('articleDetail', $this->data);
     }
+
+
+
+
 } 

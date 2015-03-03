@@ -52,35 +52,22 @@
                     <h2>Recent Recipes</h2>
                     <div class="latest-recipes">
 
-                        <div class="row-fluid">
-                            <div class="span5">
-                                <div class="recipe-image-container">
-                                    <a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/strawberry-dessert/">
-                                        <img width="220" height="140" src="http://tf.aa-team.com/wordpress/diet_and_nutrition/wp-content/uploads/2013/09/wallpaper-3000269-220x140.jpg" class="attachment-recipes-thumb wp-post-image" alt="wallpaper-3000269" />
-                                        <span class="mask">	<i class="link-icon-hover"></i>	</span>
-                                    </a>
+                        <?php foreach($recentRecipes3 as $recipes){ ?>
+                            <div class="row-fluid">
+                                <div class="span5">
+                                    <div class="recipe-image-container">
+                                        <a href="/page/articledetail/<?=$recipes['ArticleID'];?>">
+                                            <img width="220" height="140" src="<?=$recipes['Logo'];?>" class="attachment-recipes-thumb wp-post-image" alt="" style="height: 70px;" />
+                                            <span class="mask"> <i class="link-icon-hover"></i>	</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="span11">
+                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
+                                    <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
                                 </div>
                             </div>
-                            <div class="span11">
-                                <h3><a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/strawberry-dessert/">Strawberry Dessert</a></h3>
-                                <p>Lollipop powder candy canes pudding macaroon bear claw toffee pastry j ...</p>
-                            </div>
-                        </div>
-
-                        <div class="row-fluid">
-                            <div class="span5">
-                                <div class="recipe-image-container">
-                                    <a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/sweet-dessert-with-fruits/">
-                                        <img width="220" height="140" src="http://tf.aa-team.com/wordpress/diet_and_nutrition/wp-content/uploads/2013/09/wallpaper-3840371-220x140.jpg" class="attachment-recipes-thumb wp-post-image" alt="wallpaper-384037" />
-                                        <span class="mask"> <i class="link-icon-hover"></i>	</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="span11">
-                                <h3><a href="http://tf.aa-team.com/wordpress/diet_and_nutrition/recipes/sweet-dessert-with-fruits/">Sweet Dessert with Fruits</a></h3>
-                                <p>I love I love marshmallow dessert powder biscuit donut candy canes. Lo ...</p>
-                            </div>
-                        </div>
+                        <?php } ?>
 
                     </div>
                 </div>

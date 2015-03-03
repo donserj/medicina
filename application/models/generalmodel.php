@@ -21,7 +21,7 @@ class GeneralModel extends CI_Model{
 
     }
 
-    public function getArticlesByType($type, $lang, $limit=null){
+    public function getArticlesByType($type, $lang, $limit=null, $order=null){
 
         $this->db = MyDB::getConnection();
 
@@ -30,12 +30,40 @@ class GeneralModel extends CI_Model{
             $limite = "LIMIT ".$limit[0].",".$limit[1];
         }
 
-        $stmt = $this->db->prepare("SELECT * FROM Articles WHERE Lang=:lang AND ArticleType=:articletype ".$limite);
+        $ordered = "";
+        if(isset($order) && !empty($order)){
+            $ordered = "ORDER BY ".$order['column']." ".$order['method'];
+        }
+
+        $stmt = $this->db->prepare("SELECT * FROM Articles WHERE Lang=:lang AND ArticleType=:articletype ".$ordered." ".$limite);
         $stmt->execute(array(":lang" => $lang, ":articletype" => $type));
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $rows;
 
 
+    }
+
+    public function getClinics($lang){
+
+        $this->db = MyDB::getConnection();
+
+        $stmt = $this->db->prepare("SELECT * FROM ClinicsHospitals WHERE Lang=:lang");
+        $stmt->execute(array(":lang" => $lang));
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $rows;
+
+    }
+
+    public function  getArticleByID($id){
+
+        $this->db = MyDB::getConnection();
+
+        $stmt = $this->db->prepare("SELECT * FROM Articles WHERE ArticleID=:id");
+        $stmt->execute(array(":id" => $id));
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $row;
     }
 } 
