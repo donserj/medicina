@@ -223,158 +223,145 @@
 
     <!-- Content Boxes -->
     <div class="container" style="margin-top: -50px;">
-    <div class="row-fluid">
-        <div class="span13">
-            <div class="row-fluid">
+        <div class="row-fluid">
+            <div class="span13">
+                <div class="row-fluid">
 
-                <div class="span5" style="width: 26%;">
-                    <div class="row-fluid">
-                        <?php $this->load->view('parts/menu_left'); ?>
+                    <div class="span5" style="width: 26%;">
+                        <div class="row-fluid">
+                            <?php $this->load->view('parts/menu_left'); ?>
+                        </div>
                     </div>
-                </div>
 
-                <!-------------Dynamic article------------------------>
-                <div class="span11 dynamic-articles">
-
-                    <?php for($i=1;$i<=4;$i++){ ?>
-                    <div class="dynamic-article">
-                        <div><img src="/assets/images/vegetable.jpg"></div>
-                        <div class="dynamic-article-title"> <a href="#"> Title </a></div>
-                        <p class="dynamic-article-text">
-                            Text nuniu niu niu u  ppokop kop pkopo  pppko pko
-                            pko pko pko ini ui niu nnjnjnjjjjjnjnj jnjnjnjn
-                            jnjnjnjn njnjnjnjn jnjnjnjnj jnjnjnjn n uin uin iun iu niu n iun iun ui
+                    <!-------------Dynamic article------------------------>
+                    <div class="span11" id="article_detail">
+                        <h1><?=$articleDetail['Title'];?></h1>
+                        <img src="<?=$articleDetail['Image'];?>">
+                        <p>
+                            <br>
+                            <?=$articleDetail['Text'];?>
                         </p>
-                        <div class="dynamic-article-date">01.02.15</div>
-                    </div> <div class="clear"></div>
-                    <? } ?>
-                    <div class="pagination">
-                        <ul>
-                            <li><a href="#"> 1 </a></li>
-                            <li><a href="#"> 2 </a></li>
-                            <li><a href="#"> 3 </a></li>
-                            <li><a href="#"> 4 </a></li>
-                            <li><a href="#"> 5 </a></li>
-                        </ul>
+
+
+
+                    </div>
+                    <!------------------------------------->
+
+                </div>
+            </div>
+
+            <div class="span3" id="news-box">
+                <div id="news">
+                    <div id="news-header">
+                        <span>Stiri medicale</span>
+                    </div>
+                    <div id="news-items">
+                        <?php foreach($medArticles as $medArticle){?>
+                            <a href="/page/articledetail/<?=$medArticle['ArticleID'];?>">
+                                <div class="news-item">
+                                    <div class="news-img left"> <img src="<?php echo $medArticle['Logo'];?>"> </div>
+                                    <div class="left" style="width: 135px;">
+                                        <div class="news-text"> <?php echo $medArticle['Title'];?> </div>
+                                        <div class="news-date"> <?php echo $medArticle['AddTime'];?> &nbsp;&nbsp;</div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </a>
+                        <?php } ?>
+                    </div>
+                    <div class="news-open"><i class="menu-open"></i></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row-fluid" style="margin-top: 10px;">
+            <?php foreach($homeBottomArticles as $homeBottomArticle){ ?>
+                <div class="content-bottom-article">
+                    <a href="/page/articledetail/<?=$homeBottomArticle['ArticleID'];?>">
+                        <h2><?php echo $homeBottomArticle['Title'];?></h2>
+                    </a>
+                    <img src="/assets/images/doctor.jpg">
+                    <p>
+                        <?php echo $homeBottomArticle['Text'];?>
+                    </p>
+                    <div class="content-bottom-article-footer">
+                        <a href="/page/articledetail/<?=$homeBottomArticle['ArticleID'];?>"> + Read more</a>
                     </div>
                 </div>
-                <!------------------------------------->
-
-            </div>
+            <?php } ?>
+        </div>
+        <div class="row-fluid charge-more">
+            <input type="button" name="charge-more" value="Incarca mai multe" class="charge-more-btn">
         </div>
 
-        <div class="span3" id="news-box">
-            <div id="news">
-                <div id="news-header">
-                    <span>Stiri medicale</span>
-                </div>
-                <div id="news-items">
-                    <?php foreach($medArticles as $medArticle){?>
-                        <a href="/page/articledetail/<?=$medArticle['ArticleID'];?>">
-                            <div class="news-item">
-                                <div class="news-img left"> <img src="<?php echo $medArticle['Logo'];?>"> </div>
-                                <div class="left" style="width: 135px;">
-                                    <div class="news-text"> <?php echo $medArticle['Title'];?> </div>
-                                    <div class="news-date"> <?php echo $medArticle['AddTime'];?> &nbsp;&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </a>
-                    <?php } ?>
-                </div>
-                <div class="news-open"><i class="menu-open"></i></div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row-fluid" style="margin-top: 10px;">
-        <?php foreach($homeBottomArticles as $homeBottomArticle){ ?>
-            <div class="content-bottom-article">
-                <a href="/page/articledetail/<?=$homeBottomArticle['ArticleID'];?>">
-                    <h2><?php echo $homeBottomArticle['Title'];?></h2>
-                </a>
-                <img src="/assets/images/doctor.jpg">
-                <p>
-                    <?php echo $homeBottomArticle['Text'];?>
-                </p>
-                <div class="content-bottom-article-footer">
-                    <a href="#"> + Read more</a>
-                </div>
-            </div>
-        <?php } ?>
-    </div>
-    <div class="row-fluid charge-more">
-        <input type="button" name="charge-more" value="Incarca mai multe" class="charge-more-btn">
-    </div>
-
-    <div class="dn-footer-container">
-        <div class="dn-footer-about">
-            <div class="row-fluid">
-                <div class="span6">
-                    <h2>Recent Recipes</h2>
-                    <div class="latest-recipes">
-                        <?php foreach($recentRecipes1 as $recipes){ ?>
-                            <div class="row-fluid">
-                                <div class="span5">
-                                    <div class="recipe-image-container">
-                                        <a href="/page/articledetail/<?=$recipes['ArticleID'];?>">
-                                            <img width="220" height="140" src="<?=$recipes['Logo'];?>" class="attachment-recipes-thumb wp-post-image" alt="" style="height: 70px;" />
-                                            <span class="mask"> <i class="link-icon-hover"></i>	</span>
-                                        </a>
+        <div class="dn-footer-container">
+            <div class="dn-footer-about">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <h2>Recent Recipes</h2>
+                        <div class="latest-recipes">
+                            <?php foreach($recentRecipes1 as $recipes){ ?>
+                                <div class="row-fluid">
+                                    <div class="span5">
+                                        <div class="recipe-image-container">
+                                            <a href="/page/articledetail/<?=$recipes['ArticleID'];?>">
+                                                <img width="220" height="140" src="<?=$recipes['Logo'];?>" class="attachment-recipes-thumb wp-post-image" alt="" style="height: 70px;" />
+                                                <span class="mask"> <i class="link-icon-hover"></i>	</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="span11">
+                                        <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
+                                        <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
                                     </div>
                                 </div>
-                                <div class="span11">
-                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
-                                    <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
-                                </div>
-                            </div>
-                        <?php } ?>
+                            <?php } ?>
+
+                        </div>
 
                     </div>
 
-                </div>
-
-                <div class="span6">
-                    <h2>Recent Recipes</h2>
-                    <div class="latest-recipes">
-                        <?php foreach($recentRecipes2 as $recipes){ ?>
-                            <div class="row-fluid">
-                                <div class="span5">
-                                    <div class="recipe-image-container">
-                                        <a href="/page/articledetail/<?=$recipes['ArticleID'];?>">
-                                            <img width="220" height="140" src="<?=$recipes['Logo'];?>" class="attachment-recipes-thumb wp-post-image" alt="" style="height: 70px;" />
-                                            <span class="mask"> <i class="link-icon-hover"></i>	</span>
-                                        </a>
+                    <div class="span6">
+                        <h2>Recent Recipes</h2>
+                        <div class="latest-recipes">
+                            <?php foreach($recentRecipes2 as $recipes){ ?>
+                                <div class="row-fluid">
+                                    <div class="span5">
+                                        <div class="recipe-image-container">
+                                            <a href="/page/articledetail/<?=$recipes['ArticleID'];?>">
+                                                <img width="220" height="140" src="<?=$recipes['Logo'];?>" class="attachment-recipes-thumb wp-post-image" alt="" style="height: 70px;" />
+                                                <span class="mask"> <i class="link-icon-hover"></i>	</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="span11">
+                                        <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
+                                        <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
                                     </div>
                                 </div>
-                                <div class="span11">
-                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
-                                    <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
-                                </div>
-                            </div>
-                        <?php } ?>
+                            <?php } ?>
 
+                        </div>
                     </div>
-                </div>
-                <div class="span4">
-                    <div id="recipes-top-article">
-                        Top articole
-                    </div>
-                    <div id="separator-green">
-                        <img src="/assets/images/arrow_down.png">
-                    </div>
-                    <div>
-                        <?php foreach($topRightArticles as $article){?>
-                            <p class="top-article-element"><a href="/page/articledetail/<?=$article['ArticleID'];?>"><img src="<?=$article['Logo'];?>" class="left"> <?php echo $article['Title'];?> </a></p>
-                        <?php } ?>
+                    <div class="span4">
+                        <div id="recipes-top-article">
+                            Top articole
+                        </div>
+                        <div id="separator-green">
+                            <img src="/assets/images/arrow_down.png">
+                        </div>
+                        <div>
+                            <?php foreach($topRightArticles as $article){?>
+                                <p class="top-article-element"><a href="/page/articledetail/<?=$article['ArticleID'];?>"><img src="<?=$article['Logo'];?>" class="left"> <?php echo $article['Title'];?> </a></p>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
     </div>
-
-</div>
 
 <?php $this->load->view("parts/footer"); ?>

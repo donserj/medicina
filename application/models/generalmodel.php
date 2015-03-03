@@ -55,4 +55,15 @@ class GeneralModel extends CI_Model{
         return $rows;
 
     }
+
+    public function  getArticleByID($id){
+
+        $this->db = MyDB::getConnection();
+
+        $stmt = $this->db->prepare("SELECT * FROM Articles WHERE ArticleID=:id");
+        $stmt->execute(array(":id" => $id));
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $row;
+    }
 } 

@@ -301,7 +301,7 @@
                 </div>
                 <div id="news-items">
                     <?php foreach($medArticles as $medArticle){?>
-                        <a href="#">
+                        <a href="/page/articledetail/<?=$medArticle['ArticleID'];?>">
                         <div class="news-item">
                             <div class="news-img left"> <img src="<?php echo $medArticle['Logo'];?>"> </div>
                             <div class="left" style="width: 135px;">
@@ -322,7 +322,7 @@
     <div class="row-fluid" style="margin-top: 10px;">
         <?php foreach($homeBottomArticles as $homeBottomArticle){ ?>
         <div class="content-bottom-article">
-            <a href="#">
+            <a href="/page/articledetail/<?=$homeBottomArticle['ArticleID'];?>">
                 <h2><?php echo $homeBottomArticle['Title'];?></h2>
             </a>
             <img src="/assets/images/doctor.jpg">
@@ -330,7 +330,7 @@
                 <?php echo $homeBottomArticle['Text'];?>
             </p>
             <div class="content-bottom-article-footer">
-                <a href="#"> + Read more</a>
+                <a href="/page/articledetail/<?=$homeBottomArticle['ArticleID'];?>"> + Read more</a>
             </div>
         </div>
         <?php } ?>
@@ -349,14 +349,14 @@
                         <div class="row-fluid">
                             <div class="span5">
                                 <div class="recipe-image-container">
-                                    <a href="#">
+                                    <a href="/page/articledetail/<?=$recipes['ArticleID'];?>">
                                         <img width="220" height="140" src="<?=$recipes['Logo'];?>" class="attachment-recipes-thumb wp-post-image" alt="" style="height: 70px;" />
                                         <span class="mask"> <i class="link-icon-hover"></i>	</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="span11">
-                                <h3><a href="#"><?=$recipes['Title'];?></a></h3>
+                                <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
                                 <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
                             </div>
                         </div>
@@ -373,14 +373,14 @@
                             <div class="row-fluid">
                                 <div class="span5">
                                     <div class="recipe-image-container">
-                                        <a href="#">
+                                        <a href="/page/articledetail/<?=$recipes['ArticleID'];?>">
                                             <img width="220" height="140" src="<?=$recipes['Logo'];?>" class="attachment-recipes-thumb wp-post-image" alt="" style="height: 70px;" />
                                             <span class="mask"> <i class="link-icon-hover"></i>	</span>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="span11">
-                                    <h3><a href="#"><?=$recipes['Title'];?></a></h3>
+                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
                                     <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
                                 </div>
                             </div>
@@ -396,7 +396,7 @@
                     </div>
                     <div>
                         <?php foreach($topRightArticles as $article){?>
-                        <p class="top-article-element"><a href="#"><img src="<?=$article['Logo'];?>" class="left"> <?php echo $article['Title'];?> </a></p>
+                        <p class="top-article-element"><a href="/page/articledetail/<?=$article['ArticleID'];?>"><img src="<?=$article['Logo'];?>" class="left"> <?php echo $article['Title'];?> </a></p>
                         <?php } ?>
                     </div>
                 </div>

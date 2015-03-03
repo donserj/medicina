@@ -56,14 +56,14 @@
                             <div class="row-fluid">
                                 <div class="span5">
                                     <div class="recipe-image-container">
-                                        <a href="#">
+                                        <a href="/page/articledetail/<?=$recipes['ArticleID'];?>">
                                             <img width="220" height="140" src="<?=$recipes['Logo'];?>" class="attachment-recipes-thumb wp-post-image" alt="" style="height: 70px;" />
                                             <span class="mask"> <i class="link-icon-hover"></i>	</span>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="span11">
-                                    <h3><a href="#"><?=$recipes['Title'];?></a></h3>
+                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
                                     <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
                                 </div>
                             </div>
