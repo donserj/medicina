@@ -2,7 +2,7 @@
     <ul>
         <?
         foreach($leftCategories as $category){
-            echo "<li><a href='#'> {$category['CategName']} </a></li>";
+            echo "<li><a href='#'> {$category['CategName_'.$lang]} </a></li>";
         }
 
         /* ?>
