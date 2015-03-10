@@ -12,7 +12,7 @@
                 <ul>	<!-- SLIDE  -->
                     <li data-transition="random" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" >
                         <!-- MAIN IMAGE -->
-                        <img src="assets/images/vegetable.jpg"  alt="vegetable"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <img src="/assets/images/vegetable.jpg"  alt="vegetable"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
 
                         <!-- LAYER NR. 1 -->
@@ -264,26 +264,7 @@
         </div>
 
         <div class="span3" id="news-box">
-            <div id="news">
-                <div id="news-header">
-                    <span>Stiri medicale</span>
-                </div>
-                <div id="news-items">
-                    <?php foreach($medArticles as $medArticle){?>
-                        <a href="/page/articledetail/<?=$medArticle['ArticleID'];?>">
-                            <div class="news-item">
-                                <div class="news-img left"> <img src="<?php echo $medArticle['Logo'];?>"> </div>
-                                <div class="left" style="width: 135px;">
-                                    <div class="news-text"> <?php echo $medArticle['Title'];?> </div>
-                                    <div class="news-date"> <?php echo $medArticle['AddTime'];?> &nbsp;&nbsp;</div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </a>
-                    <?php } ?>
-                </div>
-                <div class="news-open"><i class="menu-open"></i></div>
-            </div>
+            <?php $this->load->view('parts/medical_news_right'); ?>
         </div>
 
     </div>
@@ -292,11 +273,11 @@
         <?php foreach($homeBottomArticles as $homeBottomArticle){ ?>
             <div class="content-bottom-article">
                 <a href="/page/articledetail/<?=$homeBottomArticle['ArticleID'];?>">
-                    <h2><?php echo $homeBottomArticle['Title'];?></h2>
+                    <h2><?php echo $homeBottomArticle['Title_'.$lang];?></h2>
                 </a>
                 <img src="/assets/images/doctor.jpg">
                 <p>
-                    <?php echo $homeBottomArticle['Text'];?>
+                    <?php echo $homeBottomArticle['Text_'.$lang];?>
                 </p>
                 <div class="content-bottom-article-footer">
                     <a href="#"> + Read more</a>
@@ -325,8 +306,8 @@
                                     </div>
                                 </div>
                                 <div class="span11">
-                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
-                                    <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
+                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title_'.$lang];?></a></h3>
+                                    <p><? echo mb_substr($recipes['Text_'.$lang], 0, 70, 'UTF-8'); ?>...</p>
                                 </div>
                             </div>
                         <?php } ?>
@@ -349,8 +330,8 @@
                                     </div>
                                 </div>
                                 <div class="span11">
-                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
-                                    <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
+                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title_'.$lang];?></a></h3>
+                                    <p><? echo mb_substr($recipes['Text_'.$lang], 0, 70, 'UTF-8'); ?>...</p>
                                 </div>
                             </div>
                         <?php } ?>
@@ -366,7 +347,7 @@
                     </div>
                     <div>
                         <?php foreach($topRightArticles as $article){?>
-                            <p class="top-article-element"><a href="/page/articledetail/<?=$article['ArticleID'];?>"><img src="<?=$article['Logo'];?>" class="left"> <?php echo $article['Title'];?> </a></p>
+                            <p class="top-article-element"><a href="/page/articledetail/<?=$article['ArticleID'];?>"><img src="<?=$article['Logo'];?>" class="left"> <?php echo $article['Title_'.$lang];?> </a></p>
                         <?php } ?>
                     </div>
                 </div>

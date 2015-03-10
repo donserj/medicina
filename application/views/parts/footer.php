@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container" style="margin-top: 10px;">
     <div class="banners">
         <img src="/assets/images/banners/left.png">
         <img src="/assets/images/banners/12275824249031666837.jpg">
@@ -63,8 +63,8 @@
                                     </div>
                                 </div>
                                 <div class="span11">
-                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title'];?></a></h3>
-                                    <p><? echo mb_substr($recipes['Text'], 0, 70, 'UTF-8'); ?>...</p>
+                                    <h3><a href="/page/articledetail/<?=$recipes['ArticleID'];?>"><?=$recipes['Title_'.$lang];?></a></h3>
+                                    <p><? echo mb_substr($recipes['Text_'.$lang], 0, 70, 'UTF-8'); ?>...</p>
                                 </div>
                             </div>
                         <?php } ?>

@@ -8,12 +8,12 @@
 
 class GeneralModel extends CI_Model{
 
-    public function getLeftCategories($lang){
+    public function getLeftCategories(){
 
         $this->db = MyDB::getConnection();
 
-        $stmt = $this->db->prepare("SELECT * FROM Categories WHERE CategLang=:lang AND ParentID=0");
-        $stmt->execute(array(":lang" => $lang));
+        $stmt = $this->db->prepare("SELECT * FROM Categories WHERE ParentID=0");
+        $stmt->execute();
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $rows;
@@ -21,7 +21,7 @@ class GeneralModel extends CI_Model{
 
     }
 
-    public function getArticlesByType($type, $lang, $limit=null, $order=null){
+    public function getArticlesByType($type, $limit=null, $order=null){
 
         $this->db = MyDB::getConnection();
 
@@ -35,8 +35,8 @@ class GeneralModel extends CI_Model{
             $ordered = "ORDER BY ".$order['column']." ".$order['method'];
         }
 
-        $stmt = $this->db->prepare("SELECT * FROM Articles WHERE Lang=:lang AND ArticleType=:articletype ".$ordered." ".$limite);
-        $stmt->execute(array(":lang" => $lang, ":articletype" => $type));
+        $stmt = $this->db->prepare("SELECT * FROM Articles WHERE ArticleType=:articletype ".$ordered." ".$limite);
+        $stmt->execute(array(":articletype" => $type));
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $rows;
@@ -44,12 +44,12 @@ class GeneralModel extends CI_Model{
 
     }
 
-    public function getClinics($lang){
+    public function getClinics(){
 
         $this->db = MyDB::getConnection();
 
-        $stmt = $this->db->prepare("SELECT * FROM ClinicsHospitals WHERE Lang=:lang");
-        $stmt->execute(array(":lang" => $lang));
+        $stmt = $this->db->prepare("SELECT * FROM ClinicsHospitals ");
+        $stmt->execute();
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $rows;
