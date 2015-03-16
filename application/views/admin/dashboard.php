@@ -1,70 +1,4 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	
-
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Bootstrap responsive -->
-	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-	<!-- small charts plugin -->
-	<link rel="stylesheet" href="css/jquery.easy-pie-chart.css">
-	<!-- calendar plugin -->
-	<link rel="stylesheet" href="css/fullcalendar.css">
-	<!-- Calendar printable -->
-	<link rel="stylesheet" href="css/fullcalendar.print.css" media="print">
-	<!-- chosen plugin -->
-	<link rel="stylesheet" href="css/chosen.css">
-	<!-- CSS for Growl like notifications -->
-	<link rel="stylesheet" href="css/jquery.gritter.css">
-	<!-- Theme CSS -->
-	<!--[if !IE]> -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- <![endif]-->
-	<!--[if IE]>
-	<link rel="stylesheet" href="css/style_ie.css">
-	<![endif]-->
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- smoother animations -->
-	<script src="js/jquery.easing.min.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- small charts plugin -->
-	<script src="js/jquery.easy-pie-chart.min.js"></script>
-	<!-- Charts plugin -->
-	<script src="js/jquery.flot.min.js"></script>
-	<!-- Pie charts plugin -->
-	<script src="js/jquery.flot.pie.min.js"></script>
-	<!-- Bar charts plugin -->
-	<script src="js/jquery.flot.bar.order.min.js"></script>
-	<!-- Charts resizable plugin -->
-	<script src="js/jquery.flot.resize.min.js"></script>
-	<!-- calendar plugin -->
-	<script src="js/fullcalendar.min.js"></script>
-	<!-- chosen plugin -->
-	<script src="js/chosen.jquery.min.js"></script>
-	<!-- Scrollable navigation -->
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<!-- Growl Like notifications -->
-	<script src="js/jquery.gritter.min.js"></script>
-
-	<!-- Just for demonstration -->
-	<script src="js/demonstration.min.js"></script>
-	<!-- Theme framework -->
-	<script src="js/eakroko.min.js"></script>
-	<!-- Theme scripts -->
-	<script src="js/application.min.js"></script>
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
-
-</head>
-
+<?php $this->load->view("admin/parts/header"); ?>
 <body data-layout="fixed">
 	<div id="top"> 
 		<div class="container-fluid">
@@ -90,7 +24,8 @@
 			</div>
 			<div class="pull-right">
 				<div class="btn-group">
-					<a href="#" class="button dropdown-toggle" data-toggle="dropdown"><i class="icon-white icon-user"></i>John Doe<span class="caret"></span></a>
+					<a href="#" class="button dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-white icon-user"></i> <?=$online['Login'];?> <span class="caret"></span></a>
 					<div class="dropdown-menu pull-right">
 						<div class="right-details">
 							<h6>Logged in as</h6>
@@ -108,7 +43,7 @@
 						</div>
 					</div>
 				</div>
-				<a href="index.html" class="button">
+				<a href="/admin/auth?out=exit" class="button">
 					<i class="icon-signout"></i>
 					Logout
 				</a>

@@ -4,10 +4,11 @@
             <div id="dn-top-widget-slider" class="owl-carousel">
                 <?php foreach($clinics as $clinic){ ?>
                 <div class="item">
-                    <h2> <?php echo $clinic['Name_'.$lang];?></h2>
+                    <h2><a href="#"> <?php echo $clinic['Name_'.$lang];?> </a> </h2>
                     <!--h3>Bill</h3-->
                     <div class="before-picture">
-                        <img width="94" height="93" src="<?php echo $clinic['Photo'];?>" class="attachment-large" alt="" />											</div>
+                        <a href="#"> <img width="94" height="93" src="<?php echo $clinic['Photo'];?>" class="attachment-large" alt="" /></a>
+                    </div>
                     <!--div class="after-picture">
                         <img width="119" height="334" src="assets/images/man1-after.png" class="attachment-large" alt="man1-after" />
                     </div-->
@@ -17,12 +18,14 @@
                     </div>
                     <span class="libs"> <?php echo $clinic['Text_'.$lang];?> </span>
                     <!--span class="sizes">& 7 sizes *</span-->
-                    <a href="#" class="btn-free-consult">
-                        Detalii<!--i class="icon"></i--></a>
+
                     <!--span class="results">*Individual results may vary</span-->
                 </div>
                 <?php } ?>
             </div>
+            <a href="#" class="btn-free-consult" style="position: absolute;left: 0px;top: 266px;">
+                Detalii
+            </a>
             <span class="arrow-bottom blue"></span>
         </div>
     </div>
