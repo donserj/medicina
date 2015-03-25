@@ -109,7 +109,7 @@
     <div id="content">
         <div class="page-header">
             <div class="pull-left">
-                <h4><i class="icon-home"></i> Dashboard</h4>
+                <h4><i class="icon-home"></i> Article</h4>
             </div>
             <div class="pull-right">
                 <ul class="bread">
@@ -126,7 +126,7 @@
                     <div class="box">
                         <div class="box-head">
                             <i class="icon-list-ul"></i>
-                            <span> New Article </span>
+                            <span> Edit Article </span>
                         </div>
                         <div class="box-body box-body-nopadding">
                             <form action="#" method="POST" class="form-horizontal">
@@ -134,7 +134,7 @@
                                 <div class="control-group">
                                     <label for="addtime" class="control-label">Data</label>
                                     <div class="controls">
-                                        <input type="text" name="addtime" id="addtime" class="input-medium datepick">
+                                        <input type="text" name="addtime" value="<?=date("d.m.y",strtotime($data['article']['AddTime']));?>" id="addtime" class="input-medium datepick">
                                         <span class="help-block"> </span>
                                     </div>
                                 </div>
@@ -142,14 +142,14 @@
                                 <div class="control-group">
                                     <label for="title_ro" class="control-label">Title RO</label>
                                     <div class="controls">
-                                        <input type="text" name="title_ro" id="title_ro" placeholder="Titel RO" class="input-xlarge">
+                                        <input type="text" name="title_ro" value="<?=$data['article']['Title_ro'];?>" id="title_ro" placeholder="Titel RO" class="input-xlarge">
                                         <span class="help-block"> <!--This is just a supporting text--></span>
                                     </div>
                                 </div>
                                 <div class="control-group">
                                     <label for="title_ru" class="control-label">Title RU</label>
                                     <div class="controls">
-                                        <input type="text" name="title_ru" id="title_ru" placeholder="Title RU" class="input-xlarge">
+                                        <input type="text" name="title_ru" value="<?=$data['article']['Title_ru'];?>" id="title_ru" placeholder="Title RU" class="input-xlarge">
                                         <span class="help-block"> <!--This is just a supporting text--></span>
                                     </div>
                                 </div>
@@ -157,11 +157,15 @@
                                 <div class="control-group">
                                     <label for="select_categ" class="control-label">Select category</label>
                                     <div class="controls">
-                                        <div class="input-xlarge"><select name="select_categ" id="select_categ" class='chosen-select'>
-                                                <option value="1">Option-1</option>
-                                                <option value="2">Option-2</option>
-                                                <option value="3">Option-3</option>
-                                                <option value="4">Option-4</option>
+                                        <div class="input-xlarge">
+                                            <select name="select_categ" id="select_categ" class='chosen-select'>
+                                                <option value="0"> </option>
+                                                <?php foreach($data['categories'] as $category){ ?>
+                                                    <option value="<?=$category['CategID'];?>"
+                                                        <?php if($category['CategID'] == $data['article']['CategoryID']) echo "selected='selected'"; ?> >
+                                                        <?=$category['CategName_ro'];?>
+                                                    </option>
+                                                <?php } ?>
                                             </select></div>
                                     </div>
                                 </div>
@@ -169,11 +173,15 @@
                                 <div class="control-group">
                                     <label for="select_type" class="control-label">Select article type</label>
                                     <div class="controls">
-                                        <div class="input-xlarge"><select name="article_type" id="select_type" class='chosen-select'>
-                                                <option value="1">Option-1</option>
-                                                <option value="2">Option-2</option>
-                                                <option value="3">Option-3</option>
-                                                <option value="4">Option-4</option>
+                                        <div class="input-xlarge">
+                                            <select name="article_type" id="select_type" class='chosen-select'>
+                                                <option value="0"> </option>
+                                                <?php foreach($data['types'] as $type){ ?>
+                                                    <option value="<?=$type['ArticleType'];?>"
+                                                        <?php if($type['ArticleType'] == $data['article']['ArticleType']) echo "selected='selected'"; ?> >
+                                                        <?=$type['ArticleType'];?>
+                                                    </option>
+                                                <?php } ?>
                                             </select></div>
                                     </div>
                                 </div>
@@ -189,10 +197,18 @@
                                 </div>
 
                                 <div class="control-group">
+                                    <label for="textfield" class="control-label"></label>
+                                    <div class="controls">
+                                        <img src="<?=$data['article']['Logo'];?>" style="width: 100px;height: auto;">
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
                                     <label for="textfield" class="control-label">Visible</label>
                                     <div class="controls">
                                         <label class='checkbox-uniformed'>
-                                            <input type="checkbox" name="visible" class='uniform-me'> <!--Lorem ipsum eiusmod-->
+                                            <input type="checkbox" name="visible" class='uniform-me'
+                                                <?php if($data['article']['Visible'] == 1) echo "checked='checked'";?> > <!--Lorem ipsum eiusmod-->
                                         </label>
                                     </div>
                                 </div>
@@ -200,14 +216,18 @@
                                 <div class="control-group">
                                     <label for="textarea" class="control-label">Text RO</label>
                                     <div class="controls">
-                                        <textarea name="text_ro" class="ckeditor span12" rows="5" style="visibility: hidden; display: none;"></textarea>
+                                        <textarea name="text_ro" class="ckeditor span12" rows="5" style="visibility: hidden; display: none;">
+                                            <?=$data['article']['Text_ro'];?>
+                                        </textarea>
                                     </div>
                                 </div>
 
                                 <div class="control-group">
                                     <label for="textarea" class="control-label">Text RU</label>
                                     <div class="controls">
-                                        <textarea name="text_ru" class="ckeditor span12" rows="5" style="visibility: hidden; display: none;"></textarea>
+                                        <textarea name="text_ru" class="ckeditor span12" rows="5" style="visibility: hidden; display: none;">
+                                            <?=$data['article']['Text_ru'];?>
+                                        </textarea>
                                     </div>
                                 </div>
 
