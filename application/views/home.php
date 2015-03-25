@@ -204,7 +204,7 @@
         </div><!-- END REVOLUTION SLIDER -->
     </div>
 
-    <div class="span4 my-search" style="z-index: 999;">
+    <div class="span4 my-search">
         <form method="post" action="#">
             <input type="search" placeholder="Cauta in site">
             <input type="submit" value="">

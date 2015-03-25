@@ -11,16 +11,10 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- Bootstrap responsive -->
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<!-- small charts plugin -->
+	<link rel="stylesheet" href="css/jquery.easy-pie-chart.css">
 	<!-- CSS for Growl like notifications -->
 	<link rel="stylesheet" href="css/jquery.gritter.css">
-	<!-- jQuery UI Theme -->
-	<link rel="stylesheet" href="css/jquery.ui.theme.css">
-	<!-- jQuery UI -->
-	<link rel="stylesheet" href="css/jquery-ui.css">
-	<!-- elfinder plugin -->
-	<link rel="stylesheet" href="css/elfinder.min.css">
-	<!-- elfinder theme -->
-	<link rel="stylesheet" href="css/theme.css">
 	<!-- Theme CSS -->
 	<!--[if !IE]> -->
 	<link rel="stylesheet" href="css/style.css">
@@ -31,31 +25,24 @@
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
-	<!-- Old jquery functions -->
-	<script src="js/jquery.migrate.min.js"></script>
-	<!-- jQuery UI Core -->
-	<script src="js/jquery.ui.core.min.js"></script>
-	<!-- jQuery UI Widget -->
-	<script src="js/jquery.ui.widget.min.js"></script>
-	<!-- jQuery UI Mouse -->
-	<script src="js/jquery.ui.mouse.min.js"></script>
-	<!-- jQuery UI Draggable -->
-	<script src="js/jquery.ui.draggable.min.js"></script>
-	<!-- jQuery UI Droppable -->
-	<script src="js/jquery.ui.droppable.min.js"></script>
-	<!-- jQuery UI Selectable -->
-	<script src="js/jquery.ui.selectable.min.js"></script>
-
 	<!-- smoother animations -->
 	<script src="js/jquery.easing.min.js"></script>
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
+	<!-- small charts plugin -->
+	<script src="js/jquery.easy-pie-chart.min.js"></script>
+	<!-- charts plugin -->
+	<script src="js/jquery.flot.min.js"></script>
+	<!-- pie charts plugin -->
+	<script src="js/jquery.flot.pie.min.js"></script>
+	<!-- bar charts plugin -->
+	<script src="js/jquery.flot.bar.order.min.js"></script>
+	<!-- charts resizable plugin -->
+	<script src="js/jquery.flot.resize.min.js"></script>
 	<!-- Scrollable navigation -->
 	<script src="js/jquery.nicescroll.min.js"></script>
 	<!-- Growl Like notifications -->
 	<script src="js/jquery.gritter.min.js"></script>
-	<!-- elfinder plugin -->
-	<script src="js/elfinder.min.js"></script>
 
 	<!-- Just for demonstration -->
 	<script src="js/demonstration.min.js"></script>
@@ -204,11 +191,11 @@
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class='active'>
 					<a href="charts.html"><i class="icon-signal icon-white"></i><span>Charts</span></a>
 				</li>
 				<li>
-					<a href="tables.html"><i class="icon-th-list icon-white"></i><span>Tables</span></a>
+					<a href="tables.php"><i class="icon-th-list icon-white"></i><span>Tables</span></a>
 				</li>
 				<li>
 					<a href="error-pages.html"><i class="icon-warning-sign icon-white"></i><span>Error Pages</span></a>
@@ -216,7 +203,7 @@
 				<li>
 					<a href="calendar.html"><i class="icon-calendar icon-white"></i><span>Calendar</span></a>
 				</li>
-				<li class='active'>
+				<li>
 					<a href="file-management.html"><i class="icon-hdd icon-white"></i><span>File management</span></a>
 				</li>
 			<li>
@@ -249,31 +236,91 @@
 					</div>
 				</div>
 			</div>
-			
 		</div>
 		<div id="content">
 			<div class="page-header">
 				<div class="pull-left">
-					<h4><i class="icon-file"></i> File management</h4>
+					<h4><i class="icon-bar-chart"></i> Charts</h4>
 				</div>
 				<div class="pull-right">
 					<ul class="bread">
 						<li><a href="dashboard.html">Home</a><span class="divider">/</span></li>
-						<li class='active'>File management</li>
+						<li class='active'>Charts</li>
 					</ul>
 				</div>
 			</div>
-			
+
 			<div class="container-fluid" id="content-area">
+				<div class="row-fluid">
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-bar-chart"></i>
+								<span>Small charts</span>
+							</div>
+							<div class="box-body">
+								<ul class="charts">
+									<li>
+										<div class="chart" data-percent="76">76%</div>
+										<span>HDD space</span>
+									</li>
+									<li>
+										<div class="chart" data-percent="15">15%</div>
+										<span>Memory used</span>
+									</li>
+									<li>
+										<div class="chart" data-percent="41">41%</div>
+										<span>Traffic</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-bar-chart"></i>
+								<span>Line chart</span>
+							</div>
+							<div class="box-body">
+								<div class="flot-line"></div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="row-fluid">
 					<div class="span12">
 						<div class="box">
 							<div class="box-head">
-								<i class="icon-file"></i>
-								<span>File management</span>
+								<i class="icon-bar-chart"></i>
+								<span>Bar chart</span>
 							</div>
-							<div class="box-body box-body-nopadding">
-								<div class="file-manager"></div>
+							<div class="box-body">
+								<div class="flot-bar"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-bar-chart"></i>
+								<span>Pie chart</span>
+							</div>
+							<div class="box-body">
+								<div class="flot-pie"></div>
+							</div>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-bar-chart"></i>
+								<span>Live chart</span>
+							</div>
+							<div class="box-body">
+								<div class="flot-live"></div>
 							</div>
 						</div>
 					</div>
@@ -300,4 +347,3 @@
 
 </body>
 </html>
-

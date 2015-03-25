@@ -1,48 +1,4 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	
-
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Bootstrap responsive -->
-	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-	<!-- CSS for Growl like notifications -->
-	<link rel="stylesheet" href="css/jquery.gritter.css">
-	<!-- Theme CSS -->
-	<!--[if !IE]> -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- <![endif]-->
-	<!--[if IE]>
-	<link rel="stylesheet" href="css/style_ie.css">
-	<![endif]-->
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- smoother animations -->
-	<script src="js/jquery.easing.min.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Scrollable navigation -->
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<!-- Growl Like notifications -->
-	<script src="js/jquery.gritter.min.js"></script>
-
-	<!-- Just for demonstration -->
-	<script src="js/demonstration.min.js"></script>
-	<!-- Theme framework -->
-	<script src="js/eakroko.min.js"></script>
-	<!-- Theme scripts -->
-	<script src="js/application.min.js"></script>
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
-
-</head>
-
+<?php $this->load->view("admin/parts/header"); ?>
 <body data-layout="fixed">
 	<div id="top"> 
 		<div class="container-fluid">
@@ -132,86 +88,8 @@
 				</div>
 			</div>
 
-			<ul class="mainNav" data-open-subnavs="multi">
-				<li>
-					<a href="dashboard.html"><i class="icon-home icon-white"></i><span>Dashboard</span></a>
-				</li>
-				<li>
-					<a href="#"><i class="icon-edit icon-white"></i><span>Forms</span><span class="label">4</span></a>
-					<ul class="subnav">
-						<li>
-							<a href="basic-forms.html">Basic forms</a>
-						</li>
-						<li>
-							<a href="extended-forms.html">Extended form elements</a>
-						</li>
-						<li>
-							<a href="form-validation.html">Form validation</a>
-						</li>
-						<li>
-							<a href="form-wizard.html">Form wizard</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#"><i class="icon-th-large icon-white"></i><span>Components</span><span class="label">7</span></a>
-					<ul class="subnav">
-						<li>
-							<a href="messages.html">Messages &amp; Chat</a>
-						</li>
-						<li>
-							<a href="gallery.html">Gallery &amp; thumbs</a>
-						</li>
-						<li>
-							<a href="icons-buttons.html">Icons &amp; buttons</a>
-						</li>
-						<li>
-							<a href="ui-elements.html">UI Elements</a>
-						</li>
-						<li>
-							<a href="typography.html">Typography</a>
-						</li>
-						<li>
-							<a href="bootstrap-elements.html">Bootstrap elements</a>
-						</li>
-						<li>
-							<a href="grid.html">Grid</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="charts.html"><i class="icon-signal icon-white"></i><span>Charts</span></a>
-				</li>
-				<li>
-					<a href="tables.html"><i class="icon-th-list icon-white"></i><span>Tables</span></a>
-				</li>
-				<li>
-					<a href="error-pages.html"><i class="icon-warning-sign icon-white"></i><span>Error Pages</span></a>
-				</li>
-				<li>
-					<a href="calendar.html"><i class="icon-calendar icon-white"></i><span>Calendar</span></a>
-				</li>
-				<li>
-					<a href="file-management.html"><i class="icon-hdd icon-white"></i><span>File management</span></a>
-				</li>
-				<li class='active open'>
-					<a href="#"><i class="icon-th icon-white"></i><span>More pages</span><span class="label">4</span></a>
-					<ul class="subnav">
-						<li>
-							<a href="invoice.html">Invoice</a>
-						</li>
-						<li>
-							<a href="search-page.html">Search page</a>
-						</li>
-						<li>
-							<a href="user-profile.html">User profile</a>
-						</li>
-						<li class='active'>
-							<a href="blank-page.html">Blank page</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
+			<?php $this->load->view("admin/parts/menu_left"); ?>
+
 			<div class="status button">
 				<div class="status-top">
 					<div class="left">

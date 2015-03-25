@@ -1,47 +1,4 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Bootstrap responsive -->
-	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-	<!-- CSS for Growl like notifications -->
-	<link rel="stylesheet" href="css/jquery.gritter.css">
-	<!-- Theme CSS -->
-	<!--[if !IE]> -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- <![endif]-->
-	<!--[if IE]>
-	<link rel="stylesheet" href="css/style_ie.css">
-	<![endif]-->
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- smoother animations -->
-	<script src="js/jquery.easing.min.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Scrollable navigation -->
-	<script src="js/jquery.nicescroll.min.js"></script>
-	<!-- Growl Like notifications -->
-	<script src="js/jquery.gritter.min.js"></script>
-
-	<!-- Just for demonstration -->
-	<script src="js/demonstration.min.js"></script>
-	<!-- Theme framework -->
-	<script src="js/eakroko.min.js"></script>
-	<!-- Theme scripts -->
-	<script src="js/application.min.js"></script>
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
-
-</head>
-
+<?php $this->load->view("admin/parts/header"); ?>
 <body data-layout="fixed">
 	<div id="top"> 
 		<div class="container-fluid">
@@ -182,7 +139,7 @@
 					<a href="charts.html"><i class="icon-signal icon-white"></i><span>Charts</span></a>
 				</li>
 				<li>
-					<a href="tables.html"><i class="icon-th-list icon-white"></i><span>Tables</span></a>
+					<a href="tables.php"><i class="icon-th-list icon-white"></i><span>Tables</span></a>
 				</li>
 				<li>
 					<a href="error-pages.html"><i class="icon-warning-sign icon-white"></i><span>Error Pages</span></a>

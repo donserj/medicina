@@ -16,7 +16,7 @@
 		</div>
 		<!--a href="#" class='pw-link'>Forgot your <span>password</span>? <i class="icon-arrow-right"></i></a-->
 		<br>
-		<?php echo $error; ?>
+		<?php if(isset($error)) echo $error; ?>
 	</div>
 
 

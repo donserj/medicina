@@ -123,7 +123,7 @@
 
 	// datepicker
 	if($('.datepick').length > 0){
-		$('.datepick').datepicker();
+		$('.datepick').datepicker({format: 'dd.mm.yyyy'});
 	}
 	// timepicker
 	if($('.timepick').length > 0){

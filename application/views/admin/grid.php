@@ -11,10 +11,6 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- Bootstrap responsive -->
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-	<!-- calendar plugin -->
-	<link rel="stylesheet" href="css/fullcalendar.css">
-	<!-- calendar printable plugin -->
-	<link rel="stylesheet" href="css/fullcalendar.print.css" media="print">
 	<!-- CSS for Growl like notifications -->
 	<link rel="stylesheet" href="css/jquery.gritter.css">
 	<!-- Theme CSS -->
@@ -35,8 +31,6 @@
 	<script src="js/jquery.nicescroll.min.js"></script>
 	<!-- Growl Like notifications -->
 	<script src="js/jquery.gritter.min.js"></script>
-	<!-- calendar plugin -->
-	<script src="js/fullcalendar.min.js"></script>
 
 	<!-- Just for demonstration -->
 	<script src="js/demonstration.min.js"></script>
@@ -159,7 +153,7 @@
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class='active open'>
 					<a href="#"><i class="icon-th-large icon-white"></i><span>Components</span><span class="label">7</span></a>
 					<ul class="subnav">
 						<li>
@@ -180,7 +174,7 @@
 						<li>
 							<a href="bootstrap-elements.html">Bootstrap elements</a>
 						</li>
-						<li>
+						<li class='active'>
 							<a href="grid.html">Grid</a>
 						</li>
 					</ul>
@@ -189,12 +183,12 @@
 					<a href="charts.html"><i class="icon-signal icon-white"></i><span>Charts</span></a>
 				</li>
 				<li>
-					<a href="tables.html"><i class="icon-th-list icon-white"></i><span>Tables</span></a>
+					<a href="tables.php"><i class="icon-th-list icon-white"></i><span>Tables</span></a>
 				</li>
 				<li>
 					<a href="error-pages.html"><i class="icon-warning-sign icon-white"></i><span>Error Pages</span></a>
 				</li>
-				<li class='active'>
+				<li>
 					<a href="calendar.html"><i class="icon-calendar icon-white"></i><span>Calendar</span></a>
 				</li>
 				<li>
@@ -235,12 +229,13 @@
 		<div id="content">
 			<div class="page-header">
 				<div class="pull-left">
-					<h4><i class="icon-calendar"></i> Calendar</h4>
+					<h4><i class="icon-reorder"></i> Grid</h4>
 				</div>
 				<div class="pull-right">
 					<ul class="bread">
 						<li><a href="dashboard.html">Home</a><span class="divider">/</span></li>
-						<li class='active'>Calendar</li>
+						<li><a href="messages.html">Components<span class="divider">/</span></a></li>
+						<li class='active'>Grid</li>
 					</ul>
 				</div>
 			</div>
@@ -250,11 +245,100 @@
 					<div class="span12">
 						<div class="box">
 							<div class="box-head">
-								<i class="icon-calendar"></i>
-								<span>Calendar</span>
+								<i class="icon-reorder"></i>
+								<span>Grid</span>
 							</div>
-							<div class="box-body box-body-nopadding">
-								<div class="calendar"></div>
+							<div class="box-body">
+								<div class="grids">
+									<div class="row-fluid">
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span2">2</div>
+										<div class="span2">2</div>
+										<div class="span2">2</div>
+										<div class="span2">2</div>
+										<div class="span2">2</div>
+										<div class="span2">2</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span3">3</div>
+										<div class="span3">3</div>
+										<div class="span3">3</div>
+										<div class="span3">3</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span4">4</div>
+										<div class="span4">4</div>
+										<div class="span4">4</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span6">6</div>
+										<div class="span6">6</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span2">2</div>
+										<div class="span10">10</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span9">9</div>
+										<div class="span3">3</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span4">4</div>
+										<div class="span8">8</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span7">7</div>
+										<div class="span5">5</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span12">12</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-reorder"></i>
+								<span>Offsets</span>
+							</div>
+							<div class="box-body">
+								<div class="grids">
+									<div class="row-fluid">
+										<div class="span4">4</div>
+										<div class="span2 offset1">2 offset 1</div>
+										<div class="span3 offset2">3 offset 3</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span6 offset3">6 offset 3</div>
+										<div class="span1 offset2">1 offset 2</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span1">1</div>
+										<div class="span1 offset10">1 offset 10</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span2">2</div>
+										<div class="span2 offset3">2 offset 3</div>
+										<div class="span2 offset3">2 offset 3</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -262,7 +346,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="navi-functions">
+<div class="navi-functions">
 		<div class="btn-group btn-group-custom">
 			<a href="#" class="button button-square layout-not-fixed notify" rel="tooltip" title="Toggle fixed-nav" data-notify-message="Fixed nav is now {{state}}" data-notify-title="Toggled fixed nav">
 				<i class="icon-unlock"></i>
