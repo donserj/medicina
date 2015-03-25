@@ -31,6 +31,12 @@
 	<script src="js/jquery.nicescroll.min.js"></script>
 	<!-- Growl Like notifications -->
 	<script src="js/jquery.gritter.min.js"></script>
+	<!-- Form plugin -->
+	<script src="js/jquery.form.min.js"></script>
+	<!-- Validation plugin -->
+	<script src="js/jquery.validate.min.js"></script>
+	<!-- Additional methods for validation plugin -->
+	<script src="js/additional-methods.min.js"></script>
 
 	<!-- Just for demonstration -->
 	<script src="js/demonstration.min.js"></script>
@@ -136,7 +142,7 @@
 				<li>
 					<a href="dashboard.html"><i class="icon-home icon-white"></i><span>Dashboard</span></a>
 				</li>
-				<li>
+				<li class='active open'>
 					<a href="#"><i class="icon-edit icon-white"></i><span>Forms</span><span class="label">4</span></a>
 					<ul class="subnav">
 						<li>
@@ -145,7 +151,7 @@
 						<li>
 							<a href="extended-forms.html">Extended form elements</a>
 						</li>
-						<li>
+						<li class='active'>
 							<a href="form-validation.html">Form validation</a>
 						</li>
 						<li>
@@ -194,10 +200,10 @@
 				<li>
 					<a href="file-management.html"><i class="icon-hdd icon-white"></i><span>File management</span></a>
 				</li>
-				<li class='active open'>
+			<li>
 					<a href="#"><i class="icon-th icon-white"></i><span>More pages</span><span class="label">4</span></a>
 					<ul class="subnav">
-						<li class='active'>
+						<li>
 							<a href="invoice.html">Invoice</a>
 						</li>
 						<li>
@@ -224,28 +230,73 @@
 					</div>
 				</div>
 			</div>
-			
+		
 		</div>
 		<div id="content">
 			<div class="page-header">
 				<div class="pull-left">
-					<h4><i class="icon-reorder"></i> Invoice</h4>
+					<h4><i class="icon-file-alt"></i> Forms - Form validation</h4>
 				</div>
 				<div class="pull-right">
 					<ul class="bread">
 						<li><a href="dashboard.html">Home</a><span class="divider">/</span></li>
-						<li><a href="invoice.html">More pages<span class="divider">/</span></a></li>
-						<li class='active'>Invoice</li>
+						<li><a href="basic-forms.html">Forms</a><span class="divider">/</span></li>
+						<li class='active'>Form validation</li>
 					</ul>
 				</div>
 			</div>
 			
 			<div class="container-fluid" id="content-area">
-				<div class="row-fluid no-print">
+				<div class="row-fluid">
 					<div class="span12">
-						<div class="alert alert-info">
-							<i class="icon-info-sign"></i>
-							Try to print this page!
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-list-ul"></i>
+								<span>Basic validation</span>
+							</div>
+							<div class="box-body box-body-nopadding">
+								<div class="alert alert-info">
+									<i class="icon-info-sign icon-large"></i> This validation is done by <code>data-attributes</code>. <strong>No javascript needed</strong>.
+								</div>
+								<form action="#" method="POST" class='form-horizontal form-bordered form-validate' id="bb">
+									<div class="control-group">
+										<label for="textfield" class="control-label">Text input</label>
+										<div class="controls">
+											<input type="text" name="textfield" id="textfield" class="input-xlarge" data-rule-required="true" data-rule-minlength="2">
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="emailfield" class="control-label">Email</label>
+										<div class="controls">
+											<input type="text" name="emailfield" id="emailfield" class="input-xlarge" data-rule-email="true" data-rule-required="true">
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="pwfield" class="control-label">Password</label>
+										<div class="controls">
+											<input type="text" name="pwfield" id="pwfield" class="input-xlarge" data-rule-required="true">
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="confirmfield" class="control-label">Confirm password</label>
+										<div class="controls">
+											<input type="text" name="confirmfield" id="confirmfield" class="input-xlarge" data-rule-equalTo="#pwfield" data-rule-required="true">
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="policy" class="control-label">Agree our policy</label>
+										<div class="controls">
+											<label class="checkbox">
+												<input type="checkbox" name="policy" value="agree" data-rule-required="true"> I agree the policy.
+											</label>
+										</div>
+									</div>
+									<div class="form-actions">
+										<input type="submit" class="button button-basic-blue" value="Submit">
+										<button type="button" class="button button-basic">Cancel</button>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -253,137 +304,83 @@
 					<div class="span12">
 						<div class="box">
 							<div class="box-head">
-								<i class="icon-list"></i>
-								<span>Invoice</span>
-								<div class="actions">
-									<a href="javascript:print()" rel='tooltip' title="Print statistics"><i class="icon-print"></i> Print</a>
-								</div>
+								<i class="icon-list-ul"></i>
+								<span>More validation elements</span>
 							</div>
 							<div class="box-body box-body-nopadding">
-								<div class="invoice-info">
-									<div class="invoice-name">
-										Company Name
-									</div>
-									<div class="invoice-from">
-										<span>From</span>
-										<strong>Company Name</strong>
-										<address>
-											Street Address <br>
-											City, ST ZIP Code <br>
-											<abbr title="Phone">Phone:</abbr> (125) 358123-581 <br>
-											<abbr title="Fax">Fax:</abbr> (125) 251656-222 
-										</address>
-									</div>
-									<div class="invoice-to">
-										<span>To</span>
-										<strong>Max Mustermann</strong>
-										<address>
-											Street Address <br>
-											City, ST ZIP Code <br>
-											<abbr title="Phone">Phone:</abbr> (125) 358123-581 <br>
-											<abbr title="Fax">Fax:</abbr> (125) 251656-222 
-										</address>
-									</div>
-									<div class="invoice-infos">
-										<table>
-											<tr>
-												<th>Date:</th>
-												<td>Aug 06, 2012</td>
-											</tr>
-											<tr>
-												<th>Invoice #:</th>
-												<td>0001752188s</td>
-											</tr>
-											<tr>
-												<th>Product:</th>
-												<td>Service Hotline</td>
-											</tr>
-										</table>
-									</div>
+								<div class="alert alert-info">
+									<i class="icon-info-sign icon-large"></i> This validation is done by <code>data-attributes</code>. <strong>No javascript needed</strong>.
 								</div>
-								<table class="table table-striped table-invoice">
-									<thead>
-										<tr>
-											<th>Item</th>
-											<th>Price</th>
-											<th>Qty</th>
-											<th class='tr'>Total</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td colspan="3"></td>
-											<td class='taxes'>
-												<p>
-													<span class="light">Subtotal</span>
-													<span>$450.00</span>
-												</p>
-												<p>
-													<span class="light">Tax(10%)</span>
-													<span>$45.00</span>
-												</p>
-												<p>
-													<span class="light">Total</span>
-													<span class="totalprice">
-														$495.00
-													</span>
-												</p>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<div class="invoice-payment">
-									<span>Payment methods</span>
-									<ul>
-										<li>
-											<img src="img/paypal.png" alt="">
-										</li>
-										<li>
-											<img src="img/visa.png" alt="">
-										</li>
-										<li>
-											<img src="img/directd.png" alt="">
-										</li>
-										<li>
-											<img src="img/mastercard.png" alt="">
-										</li>
-									</ul>
-								</div>
+								<form action="#" method="POST" class='form-horizontal form-bordered form-validate' id="aaa">
+									<div class="control-group">
+										<label for="textfield" class="control-label">Select</label>
+										<div class="controls">
+											<select name="aaa" id="bbb" data-rule-required="true">
+												<option value="">-- Please select --</option>
+												<option value="1">Option-1</option>
+												<option value="2">Option-2</option>
+												<option value="3">Option-3</option>
+												<option value="4">Option-4</option>
+												<option value="5">Option-5</option>
+												<option value="6">Option-6</option>
+												<option value="7">Option-7</option>
+												<option value="8">Option-8</option>
+												<option value="9">Option-9</option>
+												<option value="10">Option-10</option>
+											</select>
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="urlfield" class="control-label">URL <small>with http://</small></label>
+										<div class="controls">
+											<input type="text" placeholder="Enter valid URL" name="urlfield" id="urlfield" data-rule-url="true" data-rule-required="true">
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="minlengthfield" class="control-label">Minlength <small>minlength: 3</small></label>
+										<div class="controls">
+											<input type="text" placeholder="At least 3 characters" name="minlengthfield" id="minlengthfield" data-rule-minlength="3" data-rule-required="true">
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="maxlengthfield" class="control-label">Maxlength <small>maxlength: 6</small></label>
+										<div class="controls">
+											<input type="text" placeholder="At least 3 characters" name="maxlengthfield" id="maxlengthfield" data-rule-maxlength="6" data-rule-required="true">
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="datefield" class="control-label">Date <small>YYYY-MM-DD</small></label>
+										<div class="controls">
+											<input type="text" placeholder="Only numbers" name="datefield" id="datefield" data-rule-dateISO="true" data-rule-required="true">
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="numberfield" class="control-label">Number</label>
+										<div class="controls">
+											<input type="text" placeholder="Only numbers" name="numberfield" id="numberfield" data-rule-number="true" data-rule-required="true">
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="digitsfield" class="control-label">Digits</label>
+										<div class="controls">
+											<input type="text" placeholder="Only digits" name="digitsfield" id="digitsfield" data-rule-digits="true" data-rule-required="true">
+										</div>
+									</div>
+									<div class="control-group">
+										<label for="creditcardfield" class="control-label">Creditcard <small>try 446-667-651</small></label>
+										<div class="controls">
+											<input type="text" placeholder="Enter valid creditcard" name="creditcardfield" id="creditcardfield" data-rule-creditcard="true" data-rule-required="true">
+										</div>
+									</div>
+									<div class="form-actions">
+										<input type="submit" class="button button-basic-blue" value="Submit">
+										<button type="button" class="button button-basic">Cancel</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row-fluid"></div>
 			</div>
 		</div>
 	</div>
@@ -406,4 +403,3 @@
 
 </body>
 </html>
-

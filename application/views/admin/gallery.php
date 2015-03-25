@@ -31,6 +31,8 @@
 	<script src="js/jquery.nicescroll.min.js"></script>
 	<!-- Growl Like notifications -->
 	<script src="js/jquery.gritter.min.js"></script>
+	<script src="js/jquery.imagesloaded.min.js"></script>
+	<script src="js/jquery.masonry.min.js"></script>
 
 	<!-- Just for demonstration -->
 	<script src="js/demonstration.min.js"></script>
@@ -153,13 +155,13 @@
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class='active open'>
 					<a href="#"><i class="icon-th-large icon-white"></i><span>Components</span><span class="label">7</span></a>
 					<ul class="subnav">
 						<li>
 							<a href="messages.html">Messages &amp; Chat</a>
 						</li>
-						<li>
+						<li class='active'>
 							<a href="gallery.html">Gallery &amp; thumbs</a>
 						</li>
 						<li>
@@ -194,13 +196,13 @@
 				<li>
 					<a href="file-management.html"><i class="icon-hdd icon-white"></i><span>File management</span></a>
 				</li>
-				<li class='active open'>
+			<li>
 					<a href="#"><i class="icon-th icon-white"></i><span>More pages</span><span class="label">4</span></a>
 					<ul class="subnav">
 						<li>
 							<a href="invoice.html">Invoice</a>
 						</li>
-						<li class='active'>
+						<li>
 							<a href="search-page.html">Search page</a>
 						</li>
 						<li>
@@ -224,160 +226,273 @@
 					</div>
 				</div>
 			</div>
-
+			
 		</div>
 		<div id="content">
 			<div class="page-header">
 				<div class="pull-left">
-					<h4><i class="icon-reorder"></i> Search page</h4>
+					<h4><i class="icon-picture"></i> Gallery &amp; thumbs</h4>
 				</div>
 				<div class="pull-right">
 					<ul class="bread">
 						<li><a href="dashboard.html">Home</a><span class="divider">/</span></li>
-						<li><a href="invoice.html">More pages<span class="divider">/</span></a></li>
-						<li class='active'>Search page</li>
+						<li><a href="messages.html">Components<span class="divider">/</span></a></li>
+						<li class='active'>Gallery &amp; thumbs</li>
 					</ul>
 				</div>
 			</div>
-
+			
 			<div class="container-fluid" id="content-area">
 				<div class="row-fluid">
 					<div class="span12">
 						<div class="box">
 							<div class="box-head">
-								<i class="icon-search"></i>
-								<span>Search results</span>
+								<i class="icon-gallery"></i>
+								<span>Static gallery</span>
 							</div>
 							<div class="box-body box-body-nopadding">
+								<div class="alert alert-info">
+									Some images are done with <strong><a href="http://placeit.breezi.com/">PlaceIt by breezi</a></strong>.
+								</div>
 								<div class="highlight-toolbar">
-									<div class="pull-left">
+									<div class="btn-toolbar">
 										<div class="btn-toolbar">
-											<div class="btn-group">
-												<div class="pagination pagination-custom">
-													<ul>
-														<li><a href="#"><i class="icon-double-angle-left"></i></a></li>
-														<li><a href="#">1</a></li>
-														<li class='active'><a href="#">2</a></li>
-														<li><a href="#">3</a></li>
-														<li><a href="#">4</a></li>
-														<li><a href="#">5</a></li>
-														<li><a href="#"><i class="icon-double-angle-right"></i></a></li>
-													</ul>
+											<div class="pull-left"><div class="btn-group">
+												<div class="input-append">
+													<input type="text" name="search" placeholder="Search images here..">
+													<button rel="tooltip" title="Search" class="button button-basic button-icon"><i class="icon-search"></i></button>
 												</div>
 											</div>
 											<div class="btn-group">
-												<div class="dropdown">
-													<a href="#" class="button button-basic button-icon" data-toggle="dropdown" rel="tooltip" title="Sort">Sort by <span class="caret"></span></a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Name</a></li>
-														<li><a href="#">Date</a></li>
-														<li><a href="#">Relevance</a></li>
-													</ul>
+												<a href="#" rel="tooltip" title="Archive" class="button button-basic button-icon button-icon-large"><i class="icon-inbox"></i></a>
+												<a href="#" rel="tooltip" title="Move" class="button button-basic button-icon button-icon-large"><i class="icon-folder-open"></i></a>
+												<a href="#" rel="tooltip" title="Delete" class="button button-basic button-icon button-icon-large"><i class="icon-trash"></i></a>
+											</div></div>
+											<div class="pull-right"><div class="btn-toolbar">
+												<div class="btn-group">
+													<span><strong>1-25</strong> of <strong>348</strong></span>
 												</div>
-											</div>
-										</div>
-									</div>
-									<div class="pull-right">
-										<div class="btn-group">
-											<span>Showing results <strong>1-25</strong> of <strong>348</strong></span>
+												<div class="btn-group">
+													<a href="#" class="button button-basic button-icon button-icon-large" data-toggle="dropdown"><i class="icon-angle-left"></i></a>
+													<a href="#" class="button button-basic button-icon button-icon-large" data-toggle="dropdown"><i class="icon-angle-right"></i></a>
+												</div>
+												<div class="btn-group">
+													<div class="dropdown">
+														<a href="#" class="button button-basic button-icon button-icon-large" data-toggle="dropdown"><i class="icon-cog"></i><span class="caret"></span></a>
+														<ul class="dropdown-menu pull-right">
+															<li><a href="#">Settings</a></li>
+															<li><a href="#">Themes</a></li>
+															<li><a href="#">Help &amp; FAQ</a></li>
+														</ul>
+													</div>
+												</div>
+											</div></div>
 										</div>
 									</div>
 								</div>
-								<div class="search-results">
-									<ul>
-										<li>
-											<div class="thumbnail">
-												<img src="http://www.placehold.it/80" alt="">
-											</div>
-											<div class="search-info">
-												<a href="#">Lorem ipsum dolor</a>
-												<p class="url">www.loremasdasdd.com/</p>
-												<p>Lorem ipsum minim quis mollit occaecat consectetur irure. Lorem ipsum officia Excepteur ut aliqua cillum est laboris. Lorem ipsum in exercitation enim veniam exercitation consectetur. Lorem ipsum cupidatat ea culpa cupidatat sed proident officia consequat irure dolore Excepteur consectetur. Lorem ipsum sunt ut aliquip commodo mollit ad culpa. Lorem ipsum aliquip sit laborum reprehenderit amet et anim pariatur. Lorem ipsum Ut quis irure enim quis commodo ullamco ad qui qui ut id. </p>
-											</div>
-										</li>
-										<li>
-											<div class="thumbnail">
-												<img src="http://www.placehold.it/80" alt="">
-											</div>
-											<div class="search-info">
-												<a href="#">Lorem ipsum dolor</a>
-												<p class="url">www.loremasdasdd.com/</p>
-												<p>Lorem ipsum minim quis mollit occaecat consectetur irure. Lorem ipsum officia Excepteur ut aliqua cillum est laboris. Lorem ipsum in exercitation enim veniam exercitation consectetur. Lorem ipsum cupidatat ea culpa cupidatat sed proident officia consequat irure dolore Excepteur consectetur. Lorem ipsum sunt ut aliquip commodo mollit ad culpa. Lorem ipsum aliquip sit laborum reprehenderit amet et anim pariatur. Lorem ipsum Ut quis irure enim quis commodo ullamco ad qui qui ut id. </p>
-											</div>
-										</li>
-										<li>
-											<div class="thumbnail">
-												<img src="http://www.placehold.it/80" alt="">
-											</div>
-											<div class="search-info">
-												<a href="#">Lorem ipsum dolor</a>
-												<p class="url">www.loremasdasdd.com/</p>
-												<p>Lorem ipsum minim quis mollit occaecat consectetur irure. Lorem ipsum officia Excepteur ut aliqua cillum est laboris. Lorem ipsum in exercitation enim veniam exercitation consectetur. Lorem ipsum cupidatat ea culpa cupidatat sed proident officia consequat irure dolore Excepteur consectetur. Lorem ipsum sunt ut aliquip commodo mollit ad culpa. Lorem ipsum aliquip sit laborum reprehenderit amet et anim pariatur. Lorem ipsum Ut quis irure enim quis commodo ullamco ad qui qui ut id. </p>
-											</div>
-										</li>
-										<li>
-											<div class="thumbnail">
-												<img src="http://www.placehold.it/80" alt="">
-											</div>
-											<div class="search-info">
-												<a href="#">Lorem ipsum dolor</a>
-												<p class="url">www.loremasdasdd.com/</p>
-												<p>Lorem ipsum minim quis mollit occaecat consectetur irure. Lorem ipsum officia Excepteur ut aliqua cillum est laboris. Lorem ipsum in exercitation enim veniam exercitation consectetur. Lorem ipsum cupidatat ea culpa cupidatat sed proident officia consequat irure dolore Excepteur consectetur. Lorem ipsum sunt ut aliquip commodo mollit ad culpa. Lorem ipsum aliquip sit laborum reprehenderit amet et anim pariatur. Lorem ipsum Ut quis irure enim quis commodo ullamco ad qui qui ut id. </p>
-											</div>
-										</li>
-										<li>
-											<div class="thumbnail">
-												<img src="http://www.placehold.it/80" alt="">
-											</div>
-											<div class="search-info">
-												<a href="#">Lorem ipsum dolor</a>
-												<p class="url">www.loremasdasdd.com/</p>
-												<p>Lorem ipsum minim quis mollit occaecat consectetur irure. Lorem ipsum officia Excepteur ut aliqua cillum est laboris. Lorem ipsum in exercitation enim veniam exercitation consectetur. Lorem ipsum cupidatat ea culpa cupidatat sed proident officia consequat irure dolore Excepteur consectetur. Lorem ipsum sunt ut aliquip commodo mollit ad culpa. Lorem ipsum aliquip sit laborum reprehenderit amet et anim pariatur. Lorem ipsum Ut quis irure enim quis commodo ullamco ad qui qui ut id. </p>
-											</div>
-										</li>
-										<li>
-											<div class="thumbnail">
-												<img src="http://www.placehold.it/80" alt="">
-											</div>
-											<div class="search-info">
-												<a href="#">Lorem ipsum dolor</a>
-												<p class="url">www.loremasdasdd.com/</p>
-												<p>Lorem ipsum minim quis mollit occaecat consectetur irure. Lorem ipsum officia Excepteur ut aliqua cillum est laboris. Lorem ipsum in exercitation enim veniam exercitation consectetur. Lorem ipsum cupidatat ea culpa cupidatat sed proident officia consequat irure dolore Excepteur consectetur. Lorem ipsum sunt ut aliquip commodo mollit ad culpa. Lorem ipsum aliquip sit laborum reprehenderit amet et anim pariatur. Lorem ipsum Ut quis irure enim quis commodo ullamco ad qui qui ut id. </p>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="highlight-toolbar bottom">
-									<div class="pull-left">
-										<div class="btn-toolbar">
-											<div class="btn-group">
-												<div class="pagination pagination-custom">
-													<ul>
-														<li><a href="#"><i class="icon-double-angle-left"></i></a></li>
-														<li><a href="#">1</a></li>
-														<li class='active'><a href="#">2</a></li>
-														<li><a href="#">3</a></li>
-														<li><a href="#">4</a></li>
-														<li><a href="#">5</a></li>
-														<li><a href="#"><i class="icon-double-angle-right"></i></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="btn-group">
-												<div class="dropdown">
-													<a href="#" class="button button-basic button-icon" data-toggle="dropdown" rel="tooltip" title="Sort">Sort by <span class="caret"></span></a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Name</a></li>
-														<li><a href="#">Date</a></li>
-														<li><a href="#">Relevance</a></li>
-													</ul>
-												</div>
-											</div>
+								<div class="gallery nomargin">
+									<div class="gallery-image">
+										<a href="img/demo/cyan_sydneyharbourbridge.jpg">
+											<img src="img/demo/cyan_sydneyharbourbridge.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Sydney harbour bridge
+											</span>
 										</div>
 									</div>
-									<div class="pull-right">
-										<div class="btn-group">
-											<span>Showing results <strong>1-25</strong> of <strong>348</strong></span>
+									<div class="gallery-image">
+										<a href="img/demo/cyan_wallaby.jpg">
+											<img src="img/demo/cyan_wallaby.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Wallaby
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/imac.png">
+											<img src="img/demo/imac.png" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												ease on iMac
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/macbook.png">
+											<img src="img/demo/macbook.png" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												ease on MacBook
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/scottwills_butterfly.jpg">
+											<img src="img/demo/scottwills_butterfly.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Butterfly
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-gallery"></i>
+								<span>Dynamic gallery (try resizing)</span>
+							</div>
+							<div class="box-body box-body-nopadding">
+								<div class="gallery gallery-dynamic nomargin">
+									<div class="gallery-image">
+										<a href="img/demo/cyan_sydneyharbourbridge.jpg">
+											<img src="img/demo/cyan_sydneyharbourbridge.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Sydney harbour bridge
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/cyan_wallaby.jpg">
+											<img src="img/demo/cyan_wallaby.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Wallaby
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/imac.png">
+											<img src="img/demo/imac.png" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												ease on iMac
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/macbook.png">
+											<img src="img/demo/macbook.png" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												ease on MacBook
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/madness_arch2.jpg">
+											<img src="img/demo/madness_arch2.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Arch
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/madness_beach.jpg">
+											<img src="img/demo/madness_beach.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Beach
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/madness_boat.jpg">
+											<img src="img/demo/madness_boat.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Boat
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/scottwills_autumn3.jpg">
+											<img src="img/demo/scottwills_autumn3.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Autumn
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/scottwills_buffalo.jpg">
+											<img src="img/demo/scottwills_buffalo.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Buffalo
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/scottwills_butterfly.jpg">
+											<img src="img/demo/scottwills_butterfly.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Butterfly
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/scottwills_cat.jpg">
+											<img src="img/demo/scottwills_cat.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Cat
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/scottwills_fish.jpg">
+											<img src="img/demo/scottwills_fish.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Fish
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/scottwills_gardens.jpg">
+											<img src="img/demo/scottwills_gardens.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Gardens
+											</span>
+										</div>
+									</div>
+									<div class="gallery-image">
+										<a href="img/demo/scottwills_horse.jpg">
+											<img src="img/demo/scottwills_horse.jpg" alt="">
+										</a>
+										<div class="details">
+											<span class="title">
+												Horse
+											</span>
 										</div>
 									</div>
 								</div>
@@ -388,7 +503,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="navi-functions">
+<div class="navi-functions">
 		<div class="btn-group btn-group-custom">
 			<a href="#" class="button button-square layout-not-fixed notify" rel="tooltip" title="Toggle fixed-nav" data-notify-message="Fixed nav is now {{state}}" data-notify-title="Toggled fixed nav">
 				<i class="icon-unlock"></i>
@@ -407,4 +522,3 @@
 
 </body>
 </html>
-

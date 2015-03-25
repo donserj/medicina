@@ -11,6 +11,10 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- Bootstrap responsive -->
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<!-- calendar plugin -->
+	<link rel="stylesheet" href="css/fullcalendar.css">
+	<!-- calendar printable plugin -->
+	<link rel="stylesheet" href="css/fullcalendar.print.css" media="print">
 	<!-- CSS for Growl like notifications -->
 	<link rel="stylesheet" href="css/jquery.gritter.css">
 	<!-- Theme CSS -->
@@ -31,6 +35,8 @@
 	<script src="js/jquery.nicescroll.min.js"></script>
 	<!-- Growl Like notifications -->
 	<script src="js/jquery.gritter.min.js"></script>
+	<!-- calendar plugin -->
+	<script src="js/fullcalendar.min.js"></script>
 
 	<!-- Just for demonstration -->
 	<script src="js/demonstration.min.js"></script>
@@ -188,16 +194,16 @@
 				<li>
 					<a href="error-pages.html"><i class="icon-warning-sign icon-white"></i><span>Error Pages</span></a>
 				</li>
-				<li>
+				<li class='active'>
 					<a href="calendar.html"><i class="icon-calendar icon-white"></i><span>Calendar</span></a>
 				</li>
 				<li>
 					<a href="file-management.html"><i class="icon-hdd icon-white"></i><span>File management</span></a>
 				</li>
-				<li class='active open'>
+			<li>
 					<a href="#"><i class="icon-th icon-white"></i><span>More pages</span><span class="label">4</span></a>
 					<ul class="subnav">
-						<li class='active'>
+						<li>
 							<a href="invoice.html">Invoice</a>
 						</li>
 						<li>
@@ -229,161 +235,30 @@
 		<div id="content">
 			<div class="page-header">
 				<div class="pull-left">
-					<h4><i class="icon-reorder"></i> Invoice</h4>
+					<h4><i class="icon-calendar"></i> Calendar</h4>
 				</div>
 				<div class="pull-right">
 					<ul class="bread">
 						<li><a href="dashboard.html">Home</a><span class="divider">/</span></li>
-						<li><a href="invoice.html">More pages<span class="divider">/</span></a></li>
-						<li class='active'>Invoice</li>
+						<li class='active'>Calendar</li>
 					</ul>
 				</div>
 			</div>
 			
 			<div class="container-fluid" id="content-area">
-				<div class="row-fluid no-print">
-					<div class="span12">
-						<div class="alert alert-info">
-							<i class="icon-info-sign"></i>
-							Try to print this page!
-						</div>
-					</div>
-				</div>
 				<div class="row-fluid">
 					<div class="span12">
 						<div class="box">
 							<div class="box-head">
-								<i class="icon-list"></i>
-								<span>Invoice</span>
-								<div class="actions">
-									<a href="javascript:print()" rel='tooltip' title="Print statistics"><i class="icon-print"></i> Print</a>
-								</div>
+								<i class="icon-calendar"></i>
+								<span>Calendar</span>
 							</div>
 							<div class="box-body box-body-nopadding">
-								<div class="invoice-info">
-									<div class="invoice-name">
-										Company Name
-									</div>
-									<div class="invoice-from">
-										<span>From</span>
-										<strong>Company Name</strong>
-										<address>
-											Street Address <br>
-											City, ST ZIP Code <br>
-											<abbr title="Phone">Phone:</abbr> (125) 358123-581 <br>
-											<abbr title="Fax">Fax:</abbr> (125) 251656-222 
-										</address>
-									</div>
-									<div class="invoice-to">
-										<span>To</span>
-										<strong>Max Mustermann</strong>
-										<address>
-											Street Address <br>
-											City, ST ZIP Code <br>
-											<abbr title="Phone">Phone:</abbr> (125) 358123-581 <br>
-											<abbr title="Fax">Fax:</abbr> (125) 251656-222 
-										</address>
-									</div>
-									<div class="invoice-infos">
-										<table>
-											<tr>
-												<th>Date:</th>
-												<td>Aug 06, 2012</td>
-											</tr>
-											<tr>
-												<th>Invoice #:</th>
-												<td>0001752188s</td>
-											</tr>
-											<tr>
-												<th>Product:</th>
-												<td>Service Hotline</td>
-											</tr>
-										</table>
-									</div>
-								</div>
-								<table class="table table-striped table-invoice">
-									<thead>
-										<tr>
-											<th>Item</th>
-											<th>Price</th>
-											<th>Qty</th>
-											<th class='tr'>Total</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td colspan="3"></td>
-											<td class='taxes'>
-												<p>
-													<span class="light">Subtotal</span>
-													<span>$450.00</span>
-												</p>
-												<p>
-													<span class="light">Tax(10%)</span>
-													<span>$45.00</span>
-												</p>
-												<p>
-													<span class="light">Total</span>
-													<span class="totalprice">
-														$495.00
-													</span>
-												</p>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<div class="invoice-payment">
-									<span>Payment methods</span>
-									<ul>
-										<li>
-											<img src="img/paypal.png" alt="">
-										</li>
-										<li>
-											<img src="img/visa.png" alt="">
-										</li>
-										<li>
-											<img src="img/directd.png" alt="">
-										</li>
-										<li>
-											<img src="img/mastercard.png" alt="">
-										</li>
-									</ul>
-								</div>
+								<div class="calendar"></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row-fluid"></div>
 			</div>
 		</div>
 	</div>

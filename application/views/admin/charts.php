@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- Bootstrap responsive -->
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<!-- small charts plugin -->
+	<link rel="stylesheet" href="css/jquery.easy-pie-chart.css">
 	<!-- CSS for Growl like notifications -->
 	<link rel="stylesheet" href="css/jquery.gritter.css">
 	<!-- Theme CSS -->
@@ -27,6 +29,16 @@
 	<script src="js/jquery.easing.min.js"></script>
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
+	<!-- small charts plugin -->
+	<script src="js/jquery.easy-pie-chart.min.js"></script>
+	<!-- charts plugin -->
+	<script src="js/jquery.flot.min.js"></script>
+	<!-- pie charts plugin -->
+	<script src="js/jquery.flot.pie.min.js"></script>
+	<!-- bar charts plugin -->
+	<script src="js/jquery.flot.bar.order.min.js"></script>
+	<!-- charts resizable plugin -->
+	<script src="js/jquery.flot.resize.min.js"></script>
 	<!-- Scrollable navigation -->
 	<script src="js/jquery.nicescroll.min.js"></script>
 	<!-- Growl Like notifications -->
@@ -179,7 +191,7 @@
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class='active'>
 					<a href="charts.html"><i class="icon-signal icon-white"></i><span>Charts</span></a>
 				</li>
 				<li>
@@ -194,10 +206,10 @@
 				<li>
 					<a href="file-management.html"><i class="icon-hdd icon-white"></i><span>File management</span></a>
 				</li>
-				<li class='active open'>
+			<li>
 					<a href="#"><i class="icon-th icon-white"></i><span>More pages</span><span class="label">4</span></a>
 					<ul class="subnav">
-						<li class='active'>
+						<li>
 							<a href="invoice.html">Invoice</a>
 						</li>
 						<li>
@@ -224,28 +236,55 @@
 					</div>
 				</div>
 			</div>
-			
 		</div>
 		<div id="content">
 			<div class="page-header">
 				<div class="pull-left">
-					<h4><i class="icon-reorder"></i> Invoice</h4>
+					<h4><i class="icon-bar-chart"></i> Charts</h4>
 				</div>
 				<div class="pull-right">
 					<ul class="bread">
 						<li><a href="dashboard.html">Home</a><span class="divider">/</span></li>
-						<li><a href="invoice.html">More pages<span class="divider">/</span></a></li>
-						<li class='active'>Invoice</li>
+						<li class='active'>Charts</li>
 					</ul>
 				</div>
 			</div>
-			
+
 			<div class="container-fluid" id="content-area">
-				<div class="row-fluid no-print">
-					<div class="span12">
-						<div class="alert alert-info">
-							<i class="icon-info-sign"></i>
-							Try to print this page!
+				<div class="row-fluid">
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-bar-chart"></i>
+								<span>Small charts</span>
+							</div>
+							<div class="box-body">
+								<ul class="charts">
+									<li>
+										<div class="chart" data-percent="76">76%</div>
+										<span>HDD space</span>
+									</li>
+									<li>
+										<div class="chart" data-percent="15">15%</div>
+										<span>Memory used</span>
+									</li>
+									<li>
+										<div class="chart" data-percent="41">41%</div>
+										<span>Traffic</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-bar-chart"></i>
+								<span>Line chart</span>
+							</div>
+							<div class="box-body">
+								<div class="flot-line"></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -253,137 +292,39 @@
 					<div class="span12">
 						<div class="box">
 							<div class="box-head">
-								<i class="icon-list"></i>
-								<span>Invoice</span>
-								<div class="actions">
-									<a href="javascript:print()" rel='tooltip' title="Print statistics"><i class="icon-print"></i> Print</a>
-								</div>
+								<i class="icon-bar-chart"></i>
+								<span>Bar chart</span>
 							</div>
-							<div class="box-body box-body-nopadding">
-								<div class="invoice-info">
-									<div class="invoice-name">
-										Company Name
-									</div>
-									<div class="invoice-from">
-										<span>From</span>
-										<strong>Company Name</strong>
-										<address>
-											Street Address <br>
-											City, ST ZIP Code <br>
-											<abbr title="Phone">Phone:</abbr> (125) 358123-581 <br>
-											<abbr title="Fax">Fax:</abbr> (125) 251656-222 
-										</address>
-									</div>
-									<div class="invoice-to">
-										<span>To</span>
-										<strong>Max Mustermann</strong>
-										<address>
-											Street Address <br>
-											City, ST ZIP Code <br>
-											<abbr title="Phone">Phone:</abbr> (125) 358123-581 <br>
-											<abbr title="Fax">Fax:</abbr> (125) 251656-222 
-										</address>
-									</div>
-									<div class="invoice-infos">
-										<table>
-											<tr>
-												<th>Date:</th>
-												<td>Aug 06, 2012</td>
-											</tr>
-											<tr>
-												<th>Invoice #:</th>
-												<td>0001752188s</td>
-											</tr>
-											<tr>
-												<th>Product:</th>
-												<td>Service Hotline</td>
-											</tr>
-										</table>
-									</div>
-								</div>
-								<table class="table table-striped table-invoice">
-									<thead>
-										<tr>
-											<th>Item</th>
-											<th>Price</th>
-											<th>Qty</th>
-											<th class='tr'>Total</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td colspan="3"></td>
-											<td class='taxes'>
-												<p>
-													<span class="light">Subtotal</span>
-													<span>$450.00</span>
-												</p>
-												<p>
-													<span class="light">Tax(10%)</span>
-													<span>$45.00</span>
-												</p>
-												<p>
-													<span class="light">Total</span>
-													<span class="totalprice">
-														$495.00
-													</span>
-												</p>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<div class="invoice-payment">
-									<span>Payment methods</span>
-									<ul>
-										<li>
-											<img src="img/paypal.png" alt="">
-										</li>
-										<li>
-											<img src="img/visa.png" alt="">
-										</li>
-										<li>
-											<img src="img/directd.png" alt="">
-										</li>
-										<li>
-											<img src="img/mastercard.png" alt="">
-										</li>
-									</ul>
-								</div>
+							<div class="box-body">
+								<div class="flot-bar"></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row-fluid"></div>
+				<div class="row-fluid">
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-bar-chart"></i>
+								<span>Pie chart</span>
+							</div>
+							<div class="box-body">
+								<div class="flot-pie"></div>
+							</div>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-bar-chart"></i>
+								<span>Live chart</span>
+							</div>
+							<div class="box-body">
+								<div class="flot-live"></div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -406,4 +347,3 @@
 
 </body>
 </html>
-

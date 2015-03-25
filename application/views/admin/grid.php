@@ -153,7 +153,7 @@
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class='active open'>
 					<a href="#"><i class="icon-th-large icon-white"></i><span>Components</span><span class="label">7</span></a>
 					<ul class="subnav">
 						<li>
@@ -174,7 +174,7 @@
 						<li>
 							<a href="bootstrap-elements.html">Bootstrap elements</a>
 						</li>
-						<li>
+						<li class='active'>
 							<a href="grid.html">Grid</a>
 						</li>
 					</ul>
@@ -194,10 +194,10 @@
 				<li>
 					<a href="file-management.html"><i class="icon-hdd icon-white"></i><span>File management</span></a>
 				</li>
-				<li class='active open'>
+			<li>
 					<a href="#"><i class="icon-th icon-white"></i><span>More pages</span><span class="label">4</span></a>
 					<ul class="subnav">
-						<li class='active'>
+						<li>
 							<a href="invoice.html">Invoice</a>
 						</li>
 						<li>
@@ -229,23 +229,85 @@
 		<div id="content">
 			<div class="page-header">
 				<div class="pull-left">
-					<h4><i class="icon-reorder"></i> Invoice</h4>
+					<h4><i class="icon-reorder"></i> Grid</h4>
 				</div>
 				<div class="pull-right">
 					<ul class="bread">
 						<li><a href="dashboard.html">Home</a><span class="divider">/</span></li>
-						<li><a href="invoice.html">More pages<span class="divider">/</span></a></li>
-						<li class='active'>Invoice</li>
+						<li><a href="messages.html">Components<span class="divider">/</span></a></li>
+						<li class='active'>Grid</li>
 					</ul>
 				</div>
 			</div>
 			
 			<div class="container-fluid" id="content-area">
-				<div class="row-fluid no-print">
+				<div class="row-fluid">
 					<div class="span12">
-						<div class="alert alert-info">
-							<i class="icon-info-sign"></i>
-							Try to print this page!
+						<div class="box">
+							<div class="box-head">
+								<i class="icon-reorder"></i>
+								<span>Grid</span>
+							</div>
+							<div class="box-body">
+								<div class="grids">
+									<div class="row-fluid">
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+										<div class="span1">1</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span2">2</div>
+										<div class="span2">2</div>
+										<div class="span2">2</div>
+										<div class="span2">2</div>
+										<div class="span2">2</div>
+										<div class="span2">2</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span3">3</div>
+										<div class="span3">3</div>
+										<div class="span3">3</div>
+										<div class="span3">3</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span4">4</div>
+										<div class="span4">4</div>
+										<div class="span4">4</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span6">6</div>
+										<div class="span6">6</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span2">2</div>
+										<div class="span10">10</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span9">9</div>
+										<div class="span3">3</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span4">4</div>
+										<div class="span8">8</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span7">7</div>
+										<div class="span5">5</div>
+									</div>
+									<div class="row-fluid">
+										<div class="span12">12</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -253,141 +315,38 @@
 					<div class="span12">
 						<div class="box">
 							<div class="box-head">
-								<i class="icon-list"></i>
-								<span>Invoice</span>
-								<div class="actions">
-									<a href="javascript:print()" rel='tooltip' title="Print statistics"><i class="icon-print"></i> Print</a>
-								</div>
+								<i class="icon-reorder"></i>
+								<span>Offsets</span>
 							</div>
-							<div class="box-body box-body-nopadding">
-								<div class="invoice-info">
-									<div class="invoice-name">
-										Company Name
+							<div class="box-body">
+								<div class="grids">
+									<div class="row-fluid">
+										<div class="span4">4</div>
+										<div class="span2 offset1">2 offset 1</div>
+										<div class="span3 offset2">3 offset 3</div>
 									</div>
-									<div class="invoice-from">
-										<span>From</span>
-										<strong>Company Name</strong>
-										<address>
-											Street Address <br>
-											City, ST ZIP Code <br>
-											<abbr title="Phone">Phone:</abbr> (125) 358123-581 <br>
-											<abbr title="Fax">Fax:</abbr> (125) 251656-222 
-										</address>
+									<div class="row-fluid">
+										<div class="span6 offset3">6 offset 3</div>
+										<div class="span1 offset2">1 offset 2</div>
 									</div>
-									<div class="invoice-to">
-										<span>To</span>
-										<strong>Max Mustermann</strong>
-										<address>
-											Street Address <br>
-											City, ST ZIP Code <br>
-											<abbr title="Phone">Phone:</abbr> (125) 358123-581 <br>
-											<abbr title="Fax">Fax:</abbr> (125) 251656-222 
-										</address>
+									<div class="row-fluid">
+										<div class="span1">1</div>
+										<div class="span1 offset10">1 offset 10</div>
 									</div>
-									<div class="invoice-infos">
-										<table>
-											<tr>
-												<th>Date:</th>
-												<td>Aug 06, 2012</td>
-											</tr>
-											<tr>
-												<th>Invoice #:</th>
-												<td>0001752188s</td>
-											</tr>
-											<tr>
-												<th>Product:</th>
-												<td>Service Hotline</td>
-											</tr>
-										</table>
+									<div class="row-fluid">
+										<div class="span2">2</div>
+										<div class="span2 offset3">2 offset 3</div>
+										<div class="span2 offset3">2 offset 3</div>
 									</div>
-								</div>
-								<table class="table table-striped table-invoice">
-									<thead>
-										<tr>
-											<th>Item</th>
-											<th>Price</th>
-											<th>Qty</th>
-											<th class='tr'>Total</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td class='name'>Lorem ipsum in eu quis</td>
-											<td class='price'>$30.00</td>
-											<td class='qty'>3</td>
-											<td class='total'>$90.00</td>
-										</tr>
-										<tr>
-											<td colspan="3"></td>
-											<td class='taxes'>
-												<p>
-													<span class="light">Subtotal</span>
-													<span>$450.00</span>
-												</p>
-												<p>
-													<span class="light">Tax(10%)</span>
-													<span>$45.00</span>
-												</p>
-												<p>
-													<span class="light">Total</span>
-													<span class="totalprice">
-														$495.00
-													</span>
-												</p>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<div class="invoice-payment">
-									<span>Payment methods</span>
-									<ul>
-										<li>
-											<img src="img/paypal.png" alt="">
-										</li>
-										<li>
-											<img src="img/visa.png" alt="">
-										</li>
-										<li>
-											<img src="img/directd.png" alt="">
-										</li>
-										<li>
-											<img src="img/mastercard.png" alt="">
-										</li>
-									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row-fluid"></div>
 			</div>
 		</div>
 	</div>
-	<div class="navi-functions">
+<div class="navi-functions">
 		<div class="btn-group btn-group-custom">
 			<a href="#" class="button button-square layout-not-fixed notify" rel="tooltip" title="Toggle fixed-nav" data-notify-message="Fixed nav is now {{state}}" data-notify-title="Toggled fixed nav">
 				<i class="icon-unlock"></i>

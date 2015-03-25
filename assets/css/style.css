@@ -795,7 +795,7 @@ span.arrow-bottom.green {
     left: 20px;
 }
 .container .slider-widget .before-picture {
-    width: 190px;
+    width: 180px;
     height: 175px;
     background-color: #fff;
     border: 5px solid #ebebeb;
@@ -879,6 +879,13 @@ span.arrow-bottom.green {
 }
 #dn-top-widget-slider .owl-controlls .owl-buttons .owl-next:hover {
     background-position: -7px -72px;
+}
+
+#dn-top-widget-slider .item h2 a{
+    color: #0088cc;
+}
+#dn-top-widget-slider .item h2 a:hover{
+    color: #218b1c;
 }
 #calendar_wrap table{
     width:100%;
@@ -5360,7 +5367,7 @@ body .widget_categories h3 {
 #news{
     border: 0px solid grey;
     width: 205px;
-    margin: 47px 0px 0px -47px;
+    margin: 47px 0px 0px -42px;
 }
 #news-header{
     text-align: center;
@@ -5571,7 +5578,7 @@ body .widget_categories h3 {
 .my-search{
     position: relative;
     border: 0px solid #ededed;
-    margin: 0px;
+    margin: 30px 0px 0px 0px;
     padding: 0px;
 }
 .my-search form{
@@ -5581,6 +5588,7 @@ body .widget_categories h3 {
 .my-search input[type='search']{
     height: 23px;
     border-radius: 6px;
+    width: 200px;
 }
 .my-search input[type='submit']{
     position: absolute;
@@ -5699,7 +5707,7 @@ body .widget_categories h3 {
 }
 #article_detail{
     border: 0px solid #000000;
-    margin-top: -25px;
+    margin-top: 15px;
     padding: 5px;
     padding-left: 0px;
 }
@@ -5736,4 +5744,14 @@ body .widget_categories h3 {
     font-weight: 400;
     font-size: 16px;
     margin: 20px 7px 0px 0px;
+}
+
+.links{
+    margin: 20px 0px 0px 0px;
+}
+.links a{
+    color: #808080;
+}
+.links a:hover{
+    color: #0088cc;
 }
